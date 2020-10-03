@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Untitled-1.png-4eea926ef08bed337d39d014ace04e5b.stex"
+path="res://.import/2.png-25134e407e87badd9f122560a0b75dff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://algo/Untitled-1.png"
-dest_files=[ "res://.import/Untitled-1.png-4eea926ef08bed337d39d014ace04e5b.stex" ]
+source_file="res://Scene/camLoop/vids/2.png"
+dest_files=[ "res://.import/2.png-25134e407e87badd9f122560a0b75dff.stex" ]
 
 [params]
 
