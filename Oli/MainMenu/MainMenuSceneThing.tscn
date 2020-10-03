@@ -1,65 +1,57 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Oli/MainMenu/Start.png" type="Texture" id=1]
+[ext_resource path="res://Oli/MainMenu/Sound.gd" type="Script" id=1]
 [ext_resource path="res://Oli/MainMenu/musicOn.png" type="Texture" id=2]
-[ext_resource path="res://Oli/MainMenu/TextureRect.gd" type="Script" id=3]
+[ext_resource path="res://Oli/MainMenu/StartButFurtherOut.png" type="Texture" id=3]
 [ext_resource path="res://Oli/MainMenu/AnimationPlayer.gd" type="Script" id=4]
+[ext_resource path="res://Oli/MainMenu/Start.png" type="Texture" id=5]
+[ext_resource path="res://Oli/MainMenu/StartButton.gd" type="Script" id=6]
+[ext_resource path="res://Oli/MainMenu/MainMenuSceneThing.gd" type="Script" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "New Anim"
+length = 4.0
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("TextureRect:rect_scale")
+tracks/0/path = NodePath("StartButton:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 6.64176e-06, 5.31342e-05 ),
-"update": 0,
-"values": [ Vector2( 0.25, 0.25 ), Vector2( 0.26, 0.25 ) ]
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ), ExtResource( 3 ) ]
 }
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 7 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = 1280.0
-margin_bottom = 720.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="ColorRect"]
-margin_left = 45.0
-margin_top = 645.0
-margin_right = 911.0
-margin_bottom = 791.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Sound" type="TextureRect" parent="."]
+margin_left = 1210.0
+margin_top = 25.0
+margin_right = 1370.0
+margin_bottom = 142.0
 rect_scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 1 )
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect2" type="TextureRect" parent="ColorRect"]
-margin_left = 1182.0
-margin_top = 21.0
-margin_right = 1333.0
-margin_bottom = 150.0
-rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+[node name="StartButton" type="TextureRect" parent="."]
+margin_left = 24.0
+margin_top = 655.0
+margin_right = 890.0
+margin_bottom = 801.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 5 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/New Anim" = SubResource( 1 )
 script = ExtResource( 4 )
