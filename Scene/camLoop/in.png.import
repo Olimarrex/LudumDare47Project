@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Untitled-1.png-4eea926ef08bed337d39d014ace04e5b.stex"
+path="res://.import/in.png-21af1c056d452e32777d3d8bf34117ee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://algo/Untitled-1.png"
-dest_files=[ "res://.import/Untitled-1.png-4eea926ef08bed337d39d014ace04e5b.stex" ]
+source_file="res://Scene/camLoop/in.png"
+dest_files=[ "res://.import/in.png-21af1c056d452e32777d3d8bf34117ee.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
