@@ -1,28 +1,43 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scene/codeLoop/codeBlock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/codeLoop/back.png" type="Texture" id=2]
+[ext_resource path="res://Scene/codeLoop/codeLoop.gd" type="Script" id=3]
 
 [node name="codeLoop" type="Node2D"]
-position = Vector2( 15, 3 )
+script = ExtResource( 3 )
+
+[node name="back" type="Sprite" parent="."]
+position = Vector2( 160, 192 )
+texture = ExtResource( 2 )
+
+[node name="codeBlock" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, 32 )
+rotation = 1.5708
+blockType = "Start"
 
 [node name="codeBlock2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 320, 256 )
+position = Vector2( 160, 96 )
+rotation = 1.5708
 blockType = "middle"
 
 [node name="codeBlock3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 384, 256 )
+position = Vector2( 160, 160 )
+rotation = 1.5708
 blockType = "middle"
 
-[node name="codeBlock" parent="." instance=ExtResource( 1 )]
-position = Vector2( 256, 256 )
-blockType = "Start"
-
 [node name="codeBlock4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 512, 256 )
+position = Vector2( 160, 352 )
 blockType = "End"
 
 [node name="codeBlock5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 448, 256 )
+position = Vector2( 160, 224 )
+rotation = 1.5708
+blockType = "middle"
+
+[node name="codeBlock6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, 288 )
+rotation = 1.5708
 blockType = "middle"
 
 [node name="Timer" type="Timer" parent="."]

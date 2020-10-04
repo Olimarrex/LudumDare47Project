@@ -4,7 +4,7 @@
 [ext_resource path="res://Scene/camLoop/in.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 32 )
+extents = Vector2( 10, 16 )
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource( 1 )

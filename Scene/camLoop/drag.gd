@@ -8,6 +8,10 @@ extends Area2D
 var dragging = false
 var lastPos = Vector2()
 
+export var minX = 0
+export var maxX = 300
+
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -34,8 +38,9 @@ func _input(event):
 		dragging = false
 	
 	if dragging and event is InputEventMouseMotion:
+
 		position += (event.position - lastPos) * Vector2(1,0)
-		
+		position = Vector2(clamp(position[0], minX, maxX), position[1])
 		lastPos = event.position
 	
 

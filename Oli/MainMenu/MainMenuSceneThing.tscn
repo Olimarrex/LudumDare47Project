@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Oli/MainMenu/Sound.gd" type="Script" id=1]
 [ext_resource path="res://Oli/MainMenu/musicOn.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Oli/MainMenu/Start.png" type="Texture" id=5]
 [ext_resource path="res://Oli/MainMenu/StartButton.gd" type="Script" id=6]
 [ext_resource path="res://Oli/MainMenu/MainMenuSceneThing.gd" type="Script" id=7]
+[ext_resource path="res://Scene/camLoop/camHak.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Animation" id=1]
 resource_name = "New Anim"
@@ -55,3 +56,6 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/New Anim" = SubResource( 1 )
 script = ExtResource( 4 )
+
+[node name="Node2D" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12, -154 )
