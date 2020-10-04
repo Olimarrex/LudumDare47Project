@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://Scene/UI/UI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://algo/test4doors (4).png" type="Texture" id=2]
@@ -67,6 +67,7 @@
 [ext_resource path="res://Scene/level/PlantDarker.png" type="Texture" id=65]
 [ext_resource path="res://Scene/level/RedWall.png" type="Texture" id=66]
 [ext_resource path="res://Scene/level/ShitVase.png" type="Texture" id=67]
+[ext_resource path="res://algo/level1Dater.gd" type="Script" id=68]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
@@ -948,10 +949,8 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 61/shapes = [  ]
 61/z_index = 0
 
-[node name="level2" type="Node2D"]
-__meta__ = {
-"_edit_horizontal_guides_": [ 784.841 ]
-}
+[node name="level1" type="Node2D"]
+script = ExtResource( 68 )
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 940, 0 )
@@ -965,68 +964,69 @@ tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( -458782, 536870962, 0, -458774, 536870962, 0, -262178, 536870962, 0, -262170, 536870962, 0, -262162, 536870962, 0, -65574, 536870962, 0, -65566, 536870937, 0, -65558, 536870919, 0, -65550, 536870962, 0, 131038, 536870962, 0, 131046, 536870919, 0, 131054, 536870919, 0, 131062, 536870962, 0, 327642, 536870962, 0, 327650, 536870919, 0, 327658, 536870919, 0, 327666, 536870919, 0, 327674, 536870962, 0, 524254, 536870962, 0, 524262, 536870919, 0, 524270, 536870919, 0, 524278, 536870919, 0, 524286, 536870962, 0, 720866, 50, 0, 720874, 536870919, 0, 720882, 536870919, 0, 720890, 536870919, 0, 655362, 536870962, 0, 917478, 536870962, 0, 917486, 536870919, 0, 917494, 536870919, 0, 917502, 536870919, 0, 851974, 536870962, 0, 1114090, 536870962, 0, 1114098, 536870919, 0, 1114106, 536870919, 0, 1048578, 536870962, 0, 1048586, 536870962, 0, 1310702, 536870962, 0, 1310710, 536870919, 0, 1310718, 536870962, 0, 1245190, 536870962, 0, 1507314, 536870962, 0, 1507322, 536870962, 0, 1441794, 536870962, 0, 1703926, 536870962, 0, 1703934, 536870962, 0, 1900538, 536870962, 0 )
-
-[node name="beck3" type="TileMap" parent="Node2D/mover"]
-tile_set = SubResource( 2 )
-cell_size = Vector2( 32, 32 )
-cell_y_sort = true
-format = 1
-tile_data = PoolIntArray( 720890, 43, 0, 917502, 536870955, 0 )
-
-[node name="TileMap3" type="TileMap" parent="Node2D/mover"]
-tile_set = SubResource( 2 )
-cell_size = Vector2( 32, 32 )
-cell_y_sort = true
-format = 1
-tile_data = PoolIntArray( -65566, 16, 0, -65558, 43, 0, 131038, 2, 0, 131054, 536870955, 0, 327650, 43, 0, 327666, 536870955, 0, 524254, 536870955, 0, 524262, 10, 0, 524278, 536870955, 0, 720866, 536870955, 0, 720890, 536870955, 0, 917478, 536870955, 0, 1310718, 536870918, 0 )
-
-[node name="beck2" type="TileMap" parent="Node2D/mover"]
-tile_set = SubResource( 2 )
-cell_size = Vector2( 32, 32 )
-cell_y_sort = true
-format = 1
-tile_data = PoolIntArray( -131103, 536870935, 0, 524279, 19, 0, 720890, 43, 0, 786413, 536870942, 0, 786423, 31, 0, 917502, 536870933, 0, 1310710, 536870933, 0 )
+tile_data = PoolIntArray( -65558, 25, 0, 131046, 25, 0, 131054, 25, 0, 327650, 25, 0, 327658, 25, 0, 327666, 25, 0, 524254, 536870937, 0, 524262, 25, 0, 524270, 25, 0, 524278, 25, 0, 720866, 536870937, 0, 720874, 25, 0, 720882, 25, 0, 720890, 25, 0, 917478, 536870937, 0, 917486, 25, 0, 917494, 25, 0, 917502, 25, 0, 1114090, 536870937, 0, 1114098, 25, 0, 1114106, 25, 0, 1310702, 536870937, 0, 1310710, 25, 0, 1507314, 25, 0 )
 
 [node name="TileMap2" type="TileMap" parent="Node2D/mover"]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( -65566, 536870928, 0, -65558, 536870955, 0, 131046, 12, 0, 131054, 43, 0, 327658, 536870918, 0, 524262, 536870955, 0, 720874, 536870955, 0, 720881, 536870931, 0, 720890, 43, 0, 917486, 536870955, 0, 917494, 22, 0, 1114090, 536870955, 0, 1114098, 536870918, 0, 1048578, 43, 0, 1310702, 536870955, 0, 1507314, 536870955, 0, 1507322, 43, 0 )
+tile_data = PoolIntArray( -65558, 536870965, 0, 65518, 56, 0, 131054, 536870965, 0, 327664, 38, 0, 327666, 53, 0, 458733, 37, 0, 524278, 536870965, 0, 720882, 48, 0, 720890, 536870965, 0, 917494, 536870964, 0 )
 
-[node name="beck" type="TileMap" parent="Node2D/mover"]
+[node name="deck2" type="TileMap" parent="Node2D/mover"]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( -65566, 536870936, 0, -21, 536870947, 0, 131054, 30, 0, 196589, 26, 0, 393191, 536870963, 0, 589803, 536870963, 0, 720890, 536870930, 0, 786415, 536870963, 0, 917494, 24, 0, 1114099, 536870930, 0 )
+tile_data = PoolIntArray( -65558, 536870967, 0, 65518, 56, 0, 458735, 536870936, 0, 524270, 42, 0, 524278, 536870956, 0, 720890, 536870956, 0, 917478, 536870935, 0, 917490, 54, 0, 917494, 536870936, 0 )
+
+[node name="TileMap3" type="TileMap" parent="Node2D/mover"]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( -65558, 53, 0, 131046, 53, 0, 327650, 53, 0, 327666, 536870960, 0, 524254, 536870965, 0, 524269, 536870936, 0, 524270, 48, 0, 524278, 48, 0, 720866, 536870965, 0, 720874, 53, 0, 720882, 536870965, 0, 917478, 536870960, 0, 917486, 53, 0, 917502, 53, 0, 1114090, 536870965, 0, 1114106, 53, 0, 1310702, 536870965, 0, 1310710, 53, 0 )
+
+[node name="deck" type="TileMap" parent="Node2D/mover"]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( -65558, 536870967, 0, 65518, 56, 0, 458735, 536870936, 0, 524270, 42, 0, 524278, 536870956, 0, 917478, 536870935, 0, 917494, 536870936, 0 )
 
 [node name="slector" type="Sprite" parent="Node2D"]
+visible = false
 position = Vector2( -579, 254 )
 texture = ExtResource( 23 )
 
 [node name="Area2D" parent="Node2D" instance=ExtResource( 3 )]
+visible = false
 position = Vector2( -448, 294 )
 
 [node name="Area2D2" parent="Node2D" instance=ExtResource( 3 )]
+visible = false
 position = Vector2( -320, 198 )
 
 [node name="Area2D3" parent="Node2D" instance=ExtResource( 3 )]
+visible = false
 position = Vector2( -320, 390 )
 
 [node name="Area2D4" parent="Node2D" instance=ExtResource( 3 )]
+visible = false
 position = Vector2( -576, 390 )
 
 [node name="Area2D5" parent="Node2D" instance=ExtResource( 3 )]
+visible = false
 position = Vector2( -576, 198 )
 
-[node name="Player" type="Sprite" parent="."]
-position = Vector2( 492, 356 )
-texture = ExtResource( 5 )
-
 [node name="UI" parent="." instance=ExtResource( 1 )]
+visible = false
 position = Vector2( 940, 0 )
+
+[node name="Player" type="Sprite" parent="."]
+visible = false
+position = Vector2( 491, 408 )
+texture = ExtResource( 5 )
 [connection signal="input_event" from="Node2D/Area2D" to="Node2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Node2D/Area2D2" to="Node2D" method="_on_Area2D2_input_event_up"]
 [connection signal="input_event" from="Node2D/Area2D3" to="Node2D" method="_on_Area2D3_input_event_left"]

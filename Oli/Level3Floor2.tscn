@@ -1,79 +1,91 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=82 format=2]
 
-[ext_resource path="res://Scene/UI/UI.tscn" type="PackedScene" id=1]
-[ext_resource path="res://algo/test4doors (4).png" type="Texture" id=2]
-[ext_resource path="res://algo/Area2D.tscn" type="PackedScene" id=3]
-[ext_resource path="res://algo/levelMover.gd" type="Script" id=4]
-[ext_resource path="res://Player.png" type="Texture" id=5]
-[ext_resource path="res://Scene/level/VaultDoorRightOpen.png" type="Texture" id=6]
-[ext_resource path="res://Scene/level/SteelDoorOpenLeft.png" type="Texture" id=7]
-[ext_resource path="res://Scene/level/VaultDoorRight.png" type="Texture" id=8]
-[ext_resource path="res://Scene/level/VaultDoorLeftOpen.png" type="Texture" id=9]
-[ext_resource path="res://Scene/level/ConcreteWallLeft.png" type="Texture" id=10]
-[ext_resource path="res://Scene/level/DoorShutRight.png" type="Texture" id=11]
-[ext_resource path="res://Scene/level/VaultDoorLeft.png" type="Texture" id=12]
-[ext_resource path="res://Scene/level/DoorShutLeft.png" type="Texture" id=13]
-[ext_resource path="res://Scene/level/VaultWallLeft.png" type="Texture" id=14]
-[ext_resource path="res://Scene/level/DoorOpenRight.png" type="Texture" id=15]
-[ext_resource path="res://Scene/level/VaultWallRight.png" type="Texture" id=16]
-[ext_resource path="res://Scene/level/SteelDoorShutRight.png" type="Texture" id=17]
-[ext_resource path="res://Scene/level/SteelDoorOpenRight.png" type="Texture" id=18]
-[ext_resource path="res://Scene/level/SteelDoorShutLeft.png" type="Texture" id=19]
-[ext_resource path="res://Scene/level/DoorOpenLeft.png" type="Texture" id=20]
-[ext_resource path="res://Scene/level/FloorTiles.png" type="Texture" id=21]
-[ext_resource path="res://Scene/level/ConcreteWallRight.png" type="Texture" id=22]
-[ext_resource path="res://Scene/level/slector.png" type="Texture" id=23]
-[ext_resource path="res://Scene/level/WaterCooler.png" type="Texture" id=24]
-[ext_resource path="res://Scene/level/StandingPlant.png" type="Texture" id=25]
-[ext_resource path="res://Scene/level/StandingPlant2.png" type="Texture" id=26]
-[ext_resource path="res://Scene/level/Wallsafe.png" type="Texture" id=27]
-[ext_resource path="res://Scene/level/ConcreteFloor.png" type="Texture" id=28]
-[ext_resource path="res://Scene/level/Desk1.png" type="Texture" id=29]
-[ext_resource path="res://Scene/level/FiliingCab1.png" type="Texture" id=30]
-[ext_resource path="res://Scene/level/FiliingCab4.png" type="Texture" id=31]
-[ext_resource path="res://Scene/level/FiliingCab5.png" type="Texture" id=32]
-[ext_resource path="res://Scene/level/FilingCab2.png" type="Texture" id=33]
-[ext_resource path="res://Scene/level/FloorTiles2.png" type="Texture" id=34]
-[ext_resource path="res://Scene/level/Desk2.png" type="Texture" id=35]
-[ext_resource path="res://Scene/level/FancyVase.png" type="Texture" id=36]
-[ext_resource path="res://Scene/level/BankWall.png" type="Texture" id=37]
-[ext_resource path="res://Scene/level/FiliingCab3.png" type="Texture" id=38]
-[ext_resource path="res://Scene/level/BankDesk2.png" type="Texture" id=39]
-[ext_resource path="res://Scene/level/Plant1.png" type="Texture" id=40]
-[ext_resource path="res://Scene/level/Plant2.png" type="Texture" id=41]
-[ext_resource path="res://Scene/level/Plant3.png" type="Texture" id=42]
-[ext_resource path="res://Scene/level/Plant4.png" type="Texture" id=43]
-[ext_resource path="res://Scene/level/BankConsole.png" type="Texture" id=44]
-[ext_resource path="res://Scene/level/BankDesk.png" type="Texture" id=45]
-[ext_resource path="res://Scene/level/BankSeating.png" type="Texture" id=46]
-[ext_resource path="res://Scene/level/Camera1.png" type="Texture" id=47]
-[ext_resource path="res://Scene/level/Camera2.png" type="Texture" id=48]
-[ext_resource path="res://Scene/level/Water.png" type="Texture" id=49]
+[ext_resource path="res://Scene/level/DoorOpenLeftRed.png" type="Texture" id=1]
+[ext_resource path="res://algo/Area2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/UI/UI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://algo/level1Dater.gd" type="Script" id=4]
+[ext_resource path="res://algo/levelMover.gd" type="Script" id=5]
+[ext_resource path="res://algo/test4doors (4).png" type="Texture" id=6]
+[ext_resource path="res://Scene/level/Bookcase1.png" type="Texture" id=7]
+[ext_resource path="res://Scene/level/Grass.png" type="Texture" id=8]
+[ext_resource path="res://Scene/level/Carpet.png" type="Texture" id=9]
+[ext_resource path="res://Scene/level/StandingPlant.png" type="Texture" id=10]
+[ext_resource path="res://Scene/level/FiliingCab4.png" type="Texture" id=11]
+[ext_resource path="res://Scene/level/FiliingCab5.png" type="Texture" id=12]
+[ext_resource path="res://Scene/level/VaultDoorRightOpen.png" type="Texture" id=13]
+[ext_resource path="res://Scene/level/Desk1.png" type="Texture" id=14]
+[ext_resource path="res://Scene/level/FilingCab2.png" type="Texture" id=15]
+[ext_resource path="res://Scene/level/FloorTiles2.png" type="Texture" id=16]
+[ext_resource path="res://Scene/level/StandingPlant2.png" type="Texture" id=17]
+[ext_resource path="res://Scene/level/Plant2.png" type="Texture" id=18]
+[ext_resource path="res://Scene/level/DoorShutRight.png" type="Texture" id=19]
+[ext_resource path="res://Scene/level/Plant3.png" type="Texture" id=20]
+[ext_resource path="res://Scene/level/BankConsole.png" type="Texture" id=21]
+[ext_resource path="res://Scene/level/BankWall.png" type="Texture" id=22]
+[ext_resource path="res://Scene/level/FiliingCab1.png" type="Texture" id=23]
+[ext_resource path="res://Scene/level/FiliingCab3.png" type="Texture" id=24]
+[ext_resource path="res://Scene/level/VaultDoorRight.png" type="Texture" id=25]
+[ext_resource path="res://Scene/level/VaultWallLeft.png" type="Texture" id=26]
+[ext_resource path="res://Scene/level/ConcreteFloor.png" type="Texture" id=27]
+[ext_resource path="res://Scene/level/BankDesk2.png" type="Texture" id=28]
+[ext_resource path="res://Scene/level/Camera1.png" type="Texture" id=29]
+[ext_resource path="res://Player.png" type="Texture" id=30]
+[ext_resource path="res://Scene/level/SteelDoorOpenRight.png" type="Texture" id=31]
+[ext_resource path="res://Scene/level/slector.png" type="Texture" id=32]
+[ext_resource path="res://Scene/level/FancyVase.png" type="Texture" id=33]
+[ext_resource path="res://Scene/level/VaultDoorLeftOpen.png" type="Texture" id=34]
+[ext_resource path="res://Scene/level/VaultWallRight.png" type="Texture" id=35]
+[ext_resource path="res://Scene/level/SteelDoorShutRight.png" type="Texture" id=36]
+[ext_resource path="res://Scene/level/FloorTiles.png" type="Texture" id=37]
+[ext_resource path="res://Scene/level/Desk2.png" type="Texture" id=38]
+[ext_resource path="res://Scene/level/BankSeating.png" type="Texture" id=39]
+[ext_resource path="res://Scene/level/Camera2.png" type="Texture" id=40]
+[ext_resource path="res://Scene/level/Water.png" type="Texture" id=41]
+[ext_resource path="res://Scene/level/DoorOpenRight.png" type="Texture" id=42]
+[ext_resource path="res://Scene/level/SteelDoorShutLeft.png" type="Texture" id=43]
+[ext_resource path="res://Scene/level/DoorShutLeft.png" type="Texture" id=44]
+[ext_resource path="res://Scene/level/ConcreteWallLeft.png" type="Texture" id=45]
+[ext_resource path="res://Scene/level/ConcreteWallRight.png" type="Texture" id=46]
+[ext_resource path="res://Scene/level/Plant4.png" type="Texture" id=47]
+[ext_resource path="res://Scene/level/BankDesk.png" type="Texture" id=48]
+[ext_resource path="res://Scene/level/WaterCooler.png" type="Texture" id=49]
 [ext_resource path="res://Scene/level/Stairs.png" type="Texture" id=50]
 [ext_resource path="res://Scene/level/TigerSkinRug.png" type="Texture" id=51]
-[ext_resource path="res://Scene/level/SteelDoorClosedRed.png" type="Texture" id=52]
-[ext_resource path="res://Scene/level/SteelDoorOpenRed.png" type="Texture" id=53]
-[ext_resource path="res://Scene/level/DoorShutLeftRed.png" type="Texture" id=54]
-[ext_resource path="res://Scene/level/Extinguisher.png" type="Texture" id=55]
-[ext_resource path="res://Scene/level/BlueWall.png" type="Texture" id=56]
-[ext_resource path="res://Scene/level/Bookcase2.png" type="Texture" id=57]
-[ext_resource path="res://Scene/level/Carpet.png" type="Texture" id=58]
-[ext_resource path="res://Scene/level/Grass.png" type="Texture" id=59]
-[ext_resource path="res://Scene/level/Bookcase1.png" type="Texture" id=60]
-[ext_resource path="res://Scene/level/DoorOpenLeftRed.png" type="Texture" id=61]
-[ext_resource path="res://Scene/level/Sofa2.png" type="Texture" id=62]
-[ext_resource path="res://Scene/level/RedStair.png" type="Texture" id=63]
-[ext_resource path="res://Scene/level/Sofa.png" type="Texture" id=64]
-[ext_resource path="res://Scene/level/PlantDarker.png" type="Texture" id=65]
-[ext_resource path="res://Scene/level/RedWall.png" type="Texture" id=66]
+[ext_resource path="res://Scene/level/Wallsafe.png" type="Texture" id=52]
+[ext_resource path="res://Scene/level/Plant1.png" type="Texture" id=53]
+[ext_resource path="res://Scene/level/DoorOpenLeft.png" type="Texture" id=54]
+[ext_resource path="res://Scene/level/SteelDoorOpenLeft.png" type="Texture" id=55]
+[ext_resource path="res://Scene/level/VaultDoorLeft.png" type="Texture" id=56]
+[ext_resource path="res://Scene/level/DoorShutLeftRed.png" type="Texture" id=57]
+[ext_resource path="res://Scene/level/Extinguisher.png" type="Texture" id=58]
+[ext_resource path="res://Scene/level/BlueWall.png" type="Texture" id=59]
+[ext_resource path="res://Scene/level/Bookcase2.png" type="Texture" id=60]
+[ext_resource path="res://Scene/level/SteelDoorOpenRed.png" type="Texture" id=61]
+[ext_resource path="res://Scene/level/SteelDoorClosedRed.png" type="Texture" id=62]
+[ext_resource path="res://Scene/level/PlantDarker.png" type="Texture" id=63]
+[ext_resource path="res://Scene/level/RedStair.png" type="Texture" id=64]
+[ext_resource path="res://Scene/level/RedWall.png" type="Texture" id=65]
+[ext_resource path="res://Scene/level/Sofa2.png" type="Texture" id=66]
 [ext_resource path="res://Scene/level/ShitVase.png" type="Texture" id=67]
+[ext_resource path="res://Scene/level/Sofa.png" type="Texture" id=68]
+[ext_resource path="res://Scene/level/StairsDownRed.png" type="Texture" id=69]
+[ext_resource path="res://Scene/level/Armchair.png" type="Texture" id=70]
+[ext_resource path="res://Scene/level/StairsDown.png" type="Texture" id=71]
+[ext_resource path="res://Scene/level/DoorOpenLeftGreen.png" type="Texture" id=72]
+[ext_resource path="res://Scene/level/DoorShutLeftGreen.png" type="Texture" id=73]
+[ext_resource path="res://Scene/level/GreenWall.png" type="Texture" id=74]
+[ext_resource path="res://Scene/level/SteelDoorShutGreen.png" type="Texture" id=75]
+[ext_resource path="res://Scene/level/Armchair2.png" type="Texture" id=76]
+[ext_resource path="res://Scene/level/StairsGreen.png" type="Texture" id=77]
+[ext_resource path="res://Scene/level/StairsDownGreen.png" type="Texture" id=78]
+[ext_resource path="res://Scene/level/SteelDoorOpenGreen.png" type="Texture" id=79]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 
 [sub_resource type="TileSet" id=2]
 0/name = "test4doors (4).png 0"
-0/texture = ExtResource( 2 )
+0/texture = ExtResource( 6 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 256, 256 )
@@ -94,7 +106,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 } ]
 0/z_index = 0
 1/name = "ConcreteWallLeft.png 1"
-1/texture = ExtResource( 10 )
+1/texture = ExtResource( 45 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 256, 256 )
@@ -108,7 +120,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 1/shapes = [  ]
 1/z_index = 0
 2/name = "ConcreteWallRight.png 2"
-2/texture = ExtResource( 22 )
+2/texture = ExtResource( 46 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 256, 256 )
@@ -122,7 +134,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 2/shapes = [  ]
 2/z_index = 0
 3/name = "DoorOpenLeft.png 3"
-3/texture = ExtResource( 20 )
+3/texture = ExtResource( 54 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 256, 256 )
@@ -136,7 +148,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 3/shapes = [  ]
 3/z_index = 0
 4/name = "DoorOpenRight.png 4"
-4/texture = ExtResource( 15 )
+4/texture = ExtResource( 42 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 256, 256 )
@@ -150,7 +162,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 4/shapes = [  ]
 4/z_index = 0
 5/name = "DoorShutLeft.png 5"
-5/texture = ExtResource( 13 )
+5/texture = ExtResource( 44 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 256, 256 )
@@ -164,7 +176,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 5/shapes = [  ]
 5/z_index = 0
 6/name = "DoorShutRight.png 6"
-6/texture = ExtResource( 11 )
+6/texture = ExtResource( 19 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 256, 256 )
@@ -178,7 +190,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 6/shapes = [  ]
 6/z_index = 0
 7/name = "FloorTiles.png 7"
-7/texture = ExtResource( 21 )
+7/texture = ExtResource( 37 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 256, 256 )
@@ -192,7 +204,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 7/shapes = [  ]
 7/z_index = 0
 8/name = "SteelDoorOpenLeft.png 8"
-8/texture = ExtResource( 7 )
+8/texture = ExtResource( 55 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 0, 256, 256 )
@@ -206,7 +218,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 8/shapes = [  ]
 8/z_index = 0
 9/name = "SteelDoorOpenRight.png 9"
-9/texture = ExtResource( 18 )
+9/texture = ExtResource( 31 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 256, 256 )
@@ -220,7 +232,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 9/shapes = [  ]
 9/z_index = 0
 10/name = "SteelDoorShutLeft.png 10"
-10/texture = ExtResource( 19 )
+10/texture = ExtResource( 43 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 0, 0, 256, 256 )
@@ -234,7 +246,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 10/shapes = [  ]
 10/z_index = 0
 11/name = "SteelDoorShutRight.png 11"
-11/texture = ExtResource( 17 )
+11/texture = ExtResource( 36 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 0, 0, 256, 256 )
@@ -248,7 +260,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 11/shapes = [  ]
 11/z_index = 0
 12/name = "VaultDoorLeft.png 12"
-12/texture = ExtResource( 12 )
+12/texture = ExtResource( 56 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 0, 0, 256, 256 )
@@ -262,7 +274,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 12/shapes = [  ]
 12/z_index = 0
 13/name = "VaultDoorLeftOpen.png 13"
-13/texture = ExtResource( 9 )
+13/texture = ExtResource( 34 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 0, 0, 256, 256 )
@@ -276,7 +288,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 13/shapes = [  ]
 13/z_index = 0
 14/name = "VaultDoorRight.png 14"
-14/texture = ExtResource( 8 )
+14/texture = ExtResource( 25 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 0, 0, 256, 256 )
@@ -290,7 +302,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 14/shapes = [  ]
 14/z_index = 0
 15/name = "VaultDoorRightOpen.png 15"
-15/texture = ExtResource( 6 )
+15/texture = ExtResource( 13 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 0, 0, 256, 256 )
@@ -304,7 +316,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 15/shapes = [  ]
 15/z_index = 0
 16/name = "VaultWallLeft.png 16"
-16/texture = ExtResource( 14 )
+16/texture = ExtResource( 26 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 0, 0, 256, 256 )
@@ -318,7 +330,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 16/shapes = [  ]
 16/z_index = 0
 17/name = "VaultWallRight.png 17"
-17/texture = ExtResource( 16 )
+17/texture = ExtResource( 35 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 0, 0, 256, 256 )
@@ -332,7 +344,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 17/shapes = [  ]
 17/z_index = 0
 18/name = "BankConsole.png 18"
-18/texture = ExtResource( 44 )
+18/texture = ExtResource( 21 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 0, 0, 256, 256 )
@@ -346,7 +358,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 18/shapes = [  ]
 18/z_index = 0
 19/name = "BankDesk.png 19"
-19/texture = ExtResource( 45 )
+19/texture = ExtResource( 48 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 0, 0, 256, 256 )
@@ -360,7 +372,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 19/shapes = [  ]
 19/z_index = 0
 20/name = "BankDesk2.png 20"
-20/texture = ExtResource( 39 )
+20/texture = ExtResource( 28 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 0, 0, 256, 256 )
@@ -374,7 +386,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 20/shapes = [  ]
 20/z_index = 0
 21/name = "BankSeating.png 21"
-21/texture = ExtResource( 46 )
+21/texture = ExtResource( 39 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 0, 0, 256, 256 )
@@ -388,7 +400,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 21/shapes = [  ]
 21/z_index = 0
 22/name = "BankWall.png 22"
-22/texture = ExtResource( 37 )
+22/texture = ExtResource( 22 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 0, 0, 256, 256 )
@@ -402,7 +414,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 22/shapes = [  ]
 22/z_index = 0
 23/name = "Camera1.png 23"
-23/texture = ExtResource( 47 )
+23/texture = ExtResource( 29 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 0, 0, 256, 256 )
@@ -416,7 +428,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 23/shapes = [  ]
 23/z_index = 0
 24/name = "Camera2.png 24"
-24/texture = ExtResource( 48 )
+24/texture = ExtResource( 40 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
 24/region = Rect2( 0, 0, 256, 256 )
@@ -430,7 +442,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 24/shapes = [  ]
 24/z_index = 0
 25/name = "ConcreteFloor.png 25"
-25/texture = ExtResource( 28 )
+25/texture = ExtResource( 27 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
 25/region = Rect2( 0, 0, 256, 256 )
@@ -444,7 +456,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 25/shapes = [  ]
 25/z_index = 0
 26/name = "Desk1.png 26"
-26/texture = ExtResource( 29 )
+26/texture = ExtResource( 14 )
 26/tex_offset = Vector2( 0, 0 )
 26/modulate = Color( 1, 1, 1, 1 )
 26/region = Rect2( 0, 0, 256, 256 )
@@ -458,7 +470,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 26/shapes = [  ]
 26/z_index = 0
 27/name = "Desk2.png 27"
-27/texture = ExtResource( 35 )
+27/texture = ExtResource( 38 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
 27/region = Rect2( 0, 0, 256, 256 )
@@ -472,7 +484,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 27/shapes = [  ]
 27/z_index = 0
 28/name = "FancyVase.png 28"
-28/texture = ExtResource( 36 )
+28/texture = ExtResource( 33 )
 28/tex_offset = Vector2( 0, 0 )
 28/modulate = Color( 1, 1, 1, 1 )
 28/region = Rect2( 0, 0, 256, 256 )
@@ -486,7 +498,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 28/shapes = [  ]
 28/z_index = 0
 29/name = "FiliingCab1.png 29"
-29/texture = ExtResource( 30 )
+29/texture = ExtResource( 23 )
 29/tex_offset = Vector2( 0, 0 )
 29/modulate = Color( 1, 1, 1, 1 )
 29/region = Rect2( 0, 0, 256, 256 )
@@ -500,7 +512,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 29/shapes = [  ]
 29/z_index = 0
 30/name = "FiliingCab3.png 30"
-30/texture = ExtResource( 38 )
+30/texture = ExtResource( 24 )
 30/tex_offset = Vector2( 0, 0 )
 30/modulate = Color( 1, 1, 1, 1 )
 30/region = Rect2( 0, 0, 256, 256 )
@@ -514,7 +526,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 30/shapes = [  ]
 30/z_index = 0
 31/name = "FiliingCab4.png 31"
-31/texture = ExtResource( 31 )
+31/texture = ExtResource( 11 )
 31/tex_offset = Vector2( 0, 0 )
 31/modulate = Color( 1, 1, 1, 1 )
 31/region = Rect2( 0, 0, 256, 256 )
@@ -528,7 +540,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 31/shapes = [  ]
 31/z_index = 0
 32/name = "FiliingCab5.png 32"
-32/texture = ExtResource( 32 )
+32/texture = ExtResource( 12 )
 32/tex_offset = Vector2( 0, 0 )
 32/modulate = Color( 1, 1, 1, 1 )
 32/region = Rect2( 0, 0, 256, 256 )
@@ -542,7 +554,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 32/shapes = [  ]
 32/z_index = 0
 33/name = "FilingCab2.png 33"
-33/texture = ExtResource( 33 )
+33/texture = ExtResource( 15 )
 33/tex_offset = Vector2( 0, 0 )
 33/modulate = Color( 1, 1, 1, 1 )
 33/region = Rect2( 0, 0, 256, 256 )
@@ -556,7 +568,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 33/shapes = [  ]
 33/z_index = 0
 34/name = "FloorTiles2.png 34"
-34/texture = ExtResource( 34 )
+34/texture = ExtResource( 16 )
 34/tex_offset = Vector2( 0, 0 )
 34/modulate = Color( 1, 1, 1, 1 )
 34/region = Rect2( 0, 0, 256, 256 )
@@ -570,7 +582,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 34/shapes = [  ]
 34/z_index = 0
 35/name = "Plant1.png 35"
-35/texture = ExtResource( 40 )
+35/texture = ExtResource( 53 )
 35/tex_offset = Vector2( 0, 0 )
 35/modulate = Color( 1, 1, 1, 1 )
 35/region = Rect2( 0, 0, 256, 256 )
@@ -584,7 +596,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 35/shapes = [  ]
 35/z_index = 0
 36/name = "Plant2.png 36"
-36/texture = ExtResource( 41 )
+36/texture = ExtResource( 18 )
 36/tex_offset = Vector2( 0, 0 )
 36/modulate = Color( 1, 1, 1, 1 )
 36/region = Rect2( 0, 0, 256, 256 )
@@ -598,7 +610,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 36/shapes = [  ]
 36/z_index = 0
 37/name = "Plant3.png 37"
-37/texture = ExtResource( 42 )
+37/texture = ExtResource( 20 )
 37/tex_offset = Vector2( 0, 0 )
 37/modulate = Color( 1, 1, 1, 1 )
 37/region = Rect2( 0, 0, 256, 256 )
@@ -612,7 +624,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 37/shapes = [  ]
 37/z_index = 0
 38/name = "Plant4.png 38"
-38/texture = ExtResource( 43 )
+38/texture = ExtResource( 47 )
 38/tex_offset = Vector2( 0, 0 )
 38/modulate = Color( 1, 1, 1, 1 )
 38/region = Rect2( 0, 0, 256, 256 )
@@ -626,7 +638,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 38/shapes = [  ]
 38/z_index = 0
 39/name = "StandingPlant.png 39"
-39/texture = ExtResource( 25 )
+39/texture = ExtResource( 10 )
 39/tex_offset = Vector2( 0, 0 )
 39/modulate = Color( 1, 1, 1, 1 )
 39/region = Rect2( 0, 0, 256, 256 )
@@ -640,7 +652,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 39/shapes = [  ]
 39/z_index = 0
 40/name = "StandingPlant2.png 40"
-40/texture = ExtResource( 26 )
+40/texture = ExtResource( 17 )
 40/tex_offset = Vector2( 0, 0 )
 40/modulate = Color( 1, 1, 1, 1 )
 40/region = Rect2( 0, 0, 256, 256 )
@@ -654,7 +666,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 40/shapes = [  ]
 40/z_index = 0
 41/name = "Wallsafe.png 41"
-41/texture = ExtResource( 27 )
+41/texture = ExtResource( 52 )
 41/tex_offset = Vector2( 0, 0 )
 41/modulate = Color( 1, 1, 1, 1 )
 41/region = Rect2( 0, 0, 256, 256 )
@@ -668,7 +680,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 41/shapes = [  ]
 41/z_index = 0
 42/name = "WaterCooler.png 42"
-42/texture = ExtResource( 24 )
+42/texture = ExtResource( 49 )
 42/tex_offset = Vector2( 0, 0 )
 42/modulate = Color( 1, 1, 1, 1 )
 42/region = Rect2( 0, 0, 256, 256 )
@@ -682,7 +694,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 42/shapes = [  ]
 42/z_index = 0
 43/name = "BlueWall.png 43"
-43/texture = ExtResource( 56 )
+43/texture = ExtResource( 59 )
 43/tex_offset = Vector2( 0, 0 )
 43/modulate = Color( 1, 1, 1, 1 )
 43/region = Rect2( 0, 0, 256, 256 )
@@ -696,7 +708,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 43/shapes = [  ]
 43/z_index = 0
 44/name = "Bookcase1.png 44"
-44/texture = ExtResource( 60 )
+44/texture = ExtResource( 7 )
 44/tex_offset = Vector2( 0, 0 )
 44/modulate = Color( 1, 1, 1, 1 )
 44/region = Rect2( 0, 0, 256, 256 )
@@ -710,7 +722,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 44/shapes = [  ]
 44/z_index = 0
 45/name = "Bookcase2.png 45"
-45/texture = ExtResource( 57 )
+45/texture = ExtResource( 60 )
 45/tex_offset = Vector2( 0, 0 )
 45/modulate = Color( 1, 1, 1, 1 )
 45/region = Rect2( 0, 0, 256, 256 )
@@ -724,7 +736,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 45/shapes = [  ]
 45/z_index = 0
 46/name = "Carpet.png 46"
-46/texture = ExtResource( 58 )
+46/texture = ExtResource( 9 )
 46/tex_offset = Vector2( 0, 0 )
 46/modulate = Color( 1, 1, 1, 1 )
 46/region = Rect2( 0, 0, 256, 256 )
@@ -738,7 +750,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 46/shapes = [  ]
 46/z_index = 0
 47/name = "DoorOpenLeftRed.png 47"
-47/texture = ExtResource( 61 )
+47/texture = ExtResource( 1 )
 47/tex_offset = Vector2( 0, 0 )
 47/modulate = Color( 1, 1, 1, 1 )
 47/region = Rect2( 0, 0, 256, 256 )
@@ -752,7 +764,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 47/shapes = [  ]
 47/z_index = 0
 48/name = "DoorShutLeftRed.png 48"
-48/texture = ExtResource( 54 )
+48/texture = ExtResource( 57 )
 48/tex_offset = Vector2( 0, 0 )
 48/modulate = Color( 1, 1, 1, 1 )
 48/region = Rect2( 0, 0, 256, 256 )
@@ -766,7 +778,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 48/shapes = [  ]
 48/z_index = 0
 49/name = "Extinguisher.png 49"
-49/texture = ExtResource( 55 )
+49/texture = ExtResource( 58 )
 49/tex_offset = Vector2( 0, 0 )
 49/modulate = Color( 1, 1, 1, 1 )
 49/region = Rect2( 0, 0, 256, 256 )
@@ -780,7 +792,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 49/shapes = [  ]
 49/z_index = 0
 50/name = "Grass.png 50"
-50/texture = ExtResource( 59 )
+50/texture = ExtResource( 8 )
 50/tex_offset = Vector2( 0, 0 )
 50/modulate = Color( 1, 1, 1, 1 )
 50/region = Rect2( 0, 0, 256, 256 )
@@ -794,7 +806,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 50/shapes = [  ]
 50/z_index = 0
 51/name = "PlantDarker.png 51"
-51/texture = ExtResource( 65 )
+51/texture = ExtResource( 63 )
 51/tex_offset = Vector2( 0, 0 )
 51/modulate = Color( 1, 1, 1, 1 )
 51/region = Rect2( 0, 0, 256, 256 )
@@ -808,7 +820,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 51/shapes = [  ]
 51/z_index = 0
 52/name = "RedStair.png 52"
-52/texture = ExtResource( 63 )
+52/texture = ExtResource( 64 )
 52/tex_offset = Vector2( 0, 0 )
 52/modulate = Color( 1, 1, 1, 1 )
 52/region = Rect2( 0, 0, 256, 256 )
@@ -822,7 +834,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 52/shapes = [  ]
 52/z_index = 0
 53/name = "RedWall.png 53"
-53/texture = ExtResource( 66 )
+53/texture = ExtResource( 65 )
 53/tex_offset = Vector2( 0, 0 )
 53/modulate = Color( 1, 1, 1, 1 )
 53/region = Rect2( 0, 0, 256, 256 )
@@ -850,7 +862,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 54/shapes = [  ]
 54/z_index = 0
 55/name = "Sofa2.png 55"
-55/texture = ExtResource( 62 )
+55/texture = ExtResource( 66 )
 55/tex_offset = Vector2( 0, 0 )
 55/modulate = Color( 1, 1, 1, 1 )
 55/region = Rect2( 0, 0, 256, 256 )
@@ -864,7 +876,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 55/shapes = [  ]
 55/z_index = 0
 56/name = "Sofa.png 56"
-56/texture = ExtResource( 64 )
+56/texture = ExtResource( 68 )
 56/tex_offset = Vector2( 0, 0 )
 56/modulate = Color( 1, 1, 1, 1 )
 56/region = Rect2( 0, 0, 256, 256 )
@@ -892,7 +904,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 57/shapes = [  ]
 57/z_index = 0
 58/name = "SteelDoorClosedRed.png 58"
-58/texture = ExtResource( 52 )
+58/texture = ExtResource( 62 )
 58/tex_offset = Vector2( 0, 0 )
 58/modulate = Color( 1, 1, 1, 1 )
 58/region = Rect2( 0, 0, 256, 256 )
@@ -906,7 +918,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 58/shapes = [  ]
 58/z_index = 0
 59/name = "SteelDoorOpenRed.png 59"
-59/texture = ExtResource( 53 )
+59/texture = ExtResource( 61 )
 59/tex_offset = Vector2( 0, 0 )
 59/modulate = Color( 1, 1, 1, 1 )
 59/region = Rect2( 0, 0, 256, 256 )
@@ -934,7 +946,7 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 60/shapes = [  ]
 60/z_index = 0
 61/name = "Water.png 61"
-61/texture = ExtResource( 49 )
+61/texture = ExtResource( 41 )
 61/tex_offset = Vector2( 0, 0 )
 61/modulate = Color( 1, 1, 1, 1 )
 61/region = Rect2( 0, 0, 256, 256 )
@@ -947,16 +959,168 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 61/shape_one_way_margin = 0.0
 61/shapes = [  ]
 61/z_index = 0
+62/name = "StairsDownRed.png 62"
+62/texture = ExtResource( 69 )
+62/tex_offset = Vector2( 0, 0 )
+62/modulate = Color( 1, 1, 1, 1 )
+62/region = Rect2( 0, 0, 256, 256 )
+62/tile_mode = 0
+62/occluder_offset = Vector2( 0, 0 )
+62/navigation_offset = Vector2( 0, 0 )
+62/shape_offset = Vector2( 0, 0 )
+62/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+62/shape_one_way = false
+62/shape_one_way_margin = 0.0
+62/shapes = [  ]
+62/z_index = 0
+63/name = "SteelDoorShutGreen.png 63"
+63/texture = ExtResource( 75 )
+63/tex_offset = Vector2( 0, 0 )
+63/modulate = Color( 1, 1, 1, 1 )
+63/region = Rect2( 0, 0, 256, 256 )
+63/tile_mode = 0
+63/occluder_offset = Vector2( 0, 0 )
+63/navigation_offset = Vector2( 0, 0 )
+63/shape_offset = Vector2( 0, 0 )
+63/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+63/shape_one_way = false
+63/shape_one_way_margin = 0.0
+63/shapes = [  ]
+63/z_index = 0
+64/name = "SteelDoorOpenGreen.png 64"
+64/texture = ExtResource( 79 )
+64/tex_offset = Vector2( 0, 0 )
+64/modulate = Color( 1, 1, 1, 1 )
+64/region = Rect2( 0, 0, 256, 256 )
+64/tile_mode = 0
+64/occluder_offset = Vector2( 0, 0 )
+64/navigation_offset = Vector2( 0, 0 )
+64/shape_offset = Vector2( 0, 0 )
+64/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+64/shape_one_way = false
+64/shape_one_way_margin = 0.0
+64/shapes = [  ]
+64/z_index = 0
+65/name = "StairsGreen.png 65"
+65/texture = ExtResource( 77 )
+65/tex_offset = Vector2( 0, 0 )
+65/modulate = Color( 1, 1, 1, 1 )
+65/region = Rect2( 0, 0, 256, 256 )
+65/tile_mode = 0
+65/occluder_offset = Vector2( 0, 0 )
+65/navigation_offset = Vector2( 0, 0 )
+65/shape_offset = Vector2( 0, 0 )
+65/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+65/shape_one_way = false
+65/shape_one_way_margin = 0.0
+65/shapes = [  ]
+65/z_index = 0
+66/name = "StairsDownGreen.png 66"
+66/texture = ExtResource( 78 )
+66/tex_offset = Vector2( 0, 0 )
+66/modulate = Color( 1, 1, 1, 1 )
+66/region = Rect2( 0, 0, 256, 256 )
+66/tile_mode = 0
+66/occluder_offset = Vector2( 0, 0 )
+66/navigation_offset = Vector2( 0, 0 )
+66/shape_offset = Vector2( 0, 0 )
+66/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+66/shape_one_way = false
+66/shape_one_way_margin = 0.0
+66/shapes = [  ]
+66/z_index = 0
+67/name = "StairsDown.png 67"
+67/texture = ExtResource( 71 )
+67/tex_offset = Vector2( 0, 0 )
+67/modulate = Color( 1, 1, 1, 1 )
+67/region = Rect2( 0, 0, 256, 256 )
+67/tile_mode = 0
+67/occluder_offset = Vector2( 0, 0 )
+67/navigation_offset = Vector2( 0, 0 )
+67/shape_offset = Vector2( 0, 0 )
+67/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+67/shape_one_way = false
+67/shape_one_way_margin = 0.0
+67/shapes = [  ]
+67/z_index = 0
+68/name = "GreenWall.png 68"
+68/texture = ExtResource( 74 )
+68/tex_offset = Vector2( 0, 0 )
+68/modulate = Color( 1, 1, 1, 1 )
+68/region = Rect2( 0, 0, 256, 256 )
+68/tile_mode = 0
+68/occluder_offset = Vector2( 0, 0 )
+68/navigation_offset = Vector2( 0, 0 )
+68/shape_offset = Vector2( 0, 0 )
+68/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+68/shape_one_way = false
+68/shape_one_way_margin = 0.0
+68/shapes = [  ]
+68/z_index = 0
+69/name = "DoorShutLeftGreen.png 69"
+69/texture = ExtResource( 73 )
+69/tex_offset = Vector2( 0, 0 )
+69/modulate = Color( 1, 1, 1, 1 )
+69/region = Rect2( 0, 0, 256, 256 )
+69/tile_mode = 0
+69/occluder_offset = Vector2( 0, 0 )
+69/navigation_offset = Vector2( 0, 0 )
+69/shape_offset = Vector2( 0, 0 )
+69/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+69/shape_one_way = false
+69/shape_one_way_margin = 0.0
+69/shapes = [  ]
+69/z_index = 0
+70/name = "DoorOpenLeftGreen.png 70"
+70/texture = ExtResource( 72 )
+70/tex_offset = Vector2( 0, 0 )
+70/modulate = Color( 1, 1, 1, 1 )
+70/region = Rect2( 0, 0, 256, 256 )
+70/tile_mode = 0
+70/occluder_offset = Vector2( 0, 0 )
+70/navigation_offset = Vector2( 0, 0 )
+70/shape_offset = Vector2( 0, 0 )
+70/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+70/shape_one_way = false
+70/shape_one_way_margin = 0.0
+70/shapes = [  ]
+70/z_index = 0
+71/name = "Armchair.png 71"
+71/texture = ExtResource( 70 )
+71/tex_offset = Vector2( 0, 0 )
+71/modulate = Color( 1, 1, 1, 1 )
+71/region = Rect2( 0, 0, 256, 256 )
+71/tile_mode = 0
+71/occluder_offset = Vector2( 0, 0 )
+71/navigation_offset = Vector2( 0, 0 )
+71/shape_offset = Vector2( 0, 0 )
+71/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+71/shape_one_way = false
+71/shape_one_way_margin = 0.0
+71/shapes = [  ]
+71/z_index = 0
+72/name = "Armchair2.png 72"
+72/texture = ExtResource( 76 )
+72/tex_offset = Vector2( 0, 0 )
+72/modulate = Color( 1, 1, 1, 1 )
+72/region = Rect2( 0, 0, 256, 256 )
+72/tile_mode = 0
+72/occluder_offset = Vector2( 0, 0 )
+72/navigation_offset = Vector2( 0, 0 )
+72/shape_offset = Vector2( 0, 0 )
+72/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+72/shape_one_way = false
+72/shape_one_way_margin = 0.0
+72/shapes = [  ]
+72/z_index = 0
 
-[node name="level2" type="Node2D"]
-__meta__ = {
-"_edit_horizontal_guides_": [ 784.841 ]
-}
+[node name="level1" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 940, 0 )
 z_index = -2
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="mover" type="Node2D" parent="Node2D"]
 
@@ -965,68 +1129,68 @@ tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( -458782, 536870962, 0, -458774, 536870962, 0, -262178, 536870962, 0, -262170, 536870962, 0, -262162, 536870962, 0, -65574, 536870962, 0, -65566, 536870937, 0, -65558, 536870919, 0, -65550, 536870962, 0, 131038, 536870962, 0, 131046, 536870919, 0, 131054, 536870919, 0, 131062, 536870962, 0, 327642, 536870962, 0, 327650, 536870919, 0, 327658, 536870919, 0, 327666, 536870919, 0, 327674, 536870962, 0, 524254, 536870962, 0, 524262, 536870919, 0, 524270, 536870919, 0, 524278, 536870919, 0, 524286, 536870962, 0, 720866, 50, 0, 720874, 536870919, 0, 720882, 536870919, 0, 720890, 536870919, 0, 655362, 536870962, 0, 917478, 536870962, 0, 917486, 536870919, 0, 917494, 536870919, 0, 917502, 536870919, 0, 851974, 536870962, 0, 1114090, 536870962, 0, 1114098, 536870919, 0, 1114106, 536870919, 0, 1048578, 536870962, 0, 1048586, 536870962, 0, 1310702, 536870962, 0, 1310710, 536870919, 0, 1310718, 536870962, 0, 1245190, 536870962, 0, 1507314, 536870962, 0, 1507322, 536870962, 0, 1441794, 536870962, 0, 1703926, 536870962, 0, 1703934, 536870962, 0, 1900538, 536870962, 0 )
-
-[node name="beck3" type="TileMap" parent="Node2D/mover"]
-tile_set = SubResource( 2 )
-cell_size = Vector2( 32, 32 )
-cell_y_sort = true
-format = 1
-tile_data = PoolIntArray( 720890, 43, 0, 917502, 536870955, 0 )
-
-[node name="TileMap3" type="TileMap" parent="Node2D/mover"]
-tile_set = SubResource( 2 )
-cell_size = Vector2( 32, 32 )
-cell_y_sort = true
-format = 1
-tile_data = PoolIntArray( -65566, 16, 0, -65558, 43, 0, 131038, 2, 0, 131054, 536870955, 0, 327650, 43, 0, 327666, 536870955, 0, 524254, 536870955, 0, 524262, 10, 0, 524278, 536870955, 0, 720866, 536870955, 0, 720890, 536870955, 0, 917478, 536870955, 0, 1310718, 536870918, 0 )
-
-[node name="beck2" type="TileMap" parent="Node2D/mover"]
-tile_set = SubResource( 2 )
-cell_size = Vector2( 32, 32 )
-cell_y_sort = true
-format = 1
-tile_data = PoolIntArray( -131103, 536870935, 0, 524279, 19, 0, 720890, 43, 0, 786413, 536870942, 0, 786423, 31, 0, 917502, 536870933, 0, 1310710, 536870933, 0 )
+tile_data = PoolIntArray( -262178, 536870958, 0, -65574, 536870958, 0, -65566, 536870958, 0, 131030, 536870958, 0, 131038, 536870958, 0, 131046, 536870958, 0, 327642, 536870958, 0, 327650, 536870958, 0, 327658, 536870958, 0, 524254, 536870958, 0, 524262, 536870958, 0, 524270, 536870958, 0, 720866, 536870958, 0, 720874, 536870958, 0, 917478, 536870958, 0 )
 
 [node name="TileMap2" type="TileMap" parent="Node2D/mover"]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( -65566, 536870928, 0, -65558, 536870955, 0, 131046, 12, 0, 131054, 43, 0, 327658, 536870918, 0, 524262, 536870955, 0, 720874, 536870955, 0, 720881, 536870931, 0, 720890, 43, 0, 917486, 536870955, 0, 917494, 22, 0, 1114090, 536870955, 0, 1114098, 536870918, 0, 1048578, 43, 0, 1310702, 536870955, 0, 1507314, 536870955, 0, 1507322, 43, 0 )
+tile_data = PoolIntArray( -262178, 53, 0, -65574, 53, 0, 131030, 53, 0, 131046, 536870965, 0, 327658, 536870965, 0, 524246, 536870965, 0, 524270, 53, 0, 720858, 536870965, 0, 917470, 536870965, 0, 1114082, 536870965, 0, 1114090, 53, 0 )
 
-[node name="beck" type="TileMap" parent="Node2D/mover"]
+[node name="deck2" type="TileMap" parent="Node2D/mover"]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( -65566, 536870936, 0, -21, 536870947, 0, 131054, 30, 0, 196589, 26, 0, 393191, 536870963, 0, 589803, 536870963, 0, 720890, 536870930, 0, 786415, 536870963, 0, 917494, 24, 0, 1114099, 536870930, 0 )
+tile_data = PoolIntArray( 131028, 54, 0 )
+
+[node name="TileMap3" type="TileMap" parent="Node2D/mover"]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( -262178, 536870965, 0, -65566, 536870965, 0, 131038, 536870965, 0, 327634, 536870965, 0, 327650, 536870965, 0, 327658, 48, 0, 524262, 536870965, 0, 524270, 536870965, 0, 589805, 536870974, 0, 720882, 53, 0, 917486, 53, 0, 1048550, 536870966, 0, 1114082, 536870965, 0, 1114090, 53, 0 )
+
+[node name="deck" type="TileMap" parent="Node2D/mover"]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( -393250, 54, 0, -65565, 24, 0, 131038, 536870956, 0, 327650, 536870956, 0, 458736, 36, 0, 524262, 536870956, 0, 720870, 21, 0 )
 
 [node name="slector" type="Sprite" parent="Node2D"]
+visible = false
 position = Vector2( -579, 254 )
-texture = ExtResource( 23 )
+texture = ExtResource( 32 )
 
-[node name="Area2D" parent="Node2D" instance=ExtResource( 3 )]
+[node name="Area2D" parent="Node2D" instance=ExtResource( 2 )]
+visible = false
 position = Vector2( -448, 294 )
 
-[node name="Area2D2" parent="Node2D" instance=ExtResource( 3 )]
+[node name="Area2D2" parent="Node2D" instance=ExtResource( 2 )]
+visible = false
 position = Vector2( -320, 198 )
 
-[node name="Area2D3" parent="Node2D" instance=ExtResource( 3 )]
+[node name="Area2D3" parent="Node2D" instance=ExtResource( 2 )]
+visible = false
 position = Vector2( -320, 390 )
 
-[node name="Area2D4" parent="Node2D" instance=ExtResource( 3 )]
+[node name="Area2D4" parent="Node2D" instance=ExtResource( 2 )]
+visible = false
 position = Vector2( -576, 390 )
 
-[node name="Area2D5" parent="Node2D" instance=ExtResource( 3 )]
+[node name="Area2D5" parent="Node2D" instance=ExtResource( 2 )]
+visible = false
 position = Vector2( -576, 198 )
 
-[node name="Player" type="Sprite" parent="."]
-position = Vector2( 492, 356 )
-texture = ExtResource( 5 )
-
-[node name="UI" parent="." instance=ExtResource( 1 )]
+[node name="UI" parent="." instance=ExtResource( 3 )]
+visible = false
 position = Vector2( 940, 0 )
+
+[node name="Player" type="Sprite" parent="."]
+position = Vector2( 491, 408 )
+texture = ExtResource( 30 )
 [connection signal="input_event" from="Node2D/Area2D" to="Node2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Node2D/Area2D2" to="Node2D" method="_on_Area2D2_input_event_up"]
 [connection signal="input_event" from="Node2D/Area2D3" to="Node2D" method="_on_Area2D3_input_event_left"]
