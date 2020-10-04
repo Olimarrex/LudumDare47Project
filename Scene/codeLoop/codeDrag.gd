@@ -1,7 +1,7 @@
 extends Node2D
 
 
-
+signal hacked
 var dragging = false
 var lastPos = Vector2()
 var lastLoc = Vector2()
@@ -139,7 +139,8 @@ func _on_Timer_timeout():
 			if get_parent().hitEx:
 				print("loop whith EX")
 			elif get_parent().includ == 0:
-				print("looped whith all includes you win")
+				#print("looped whith all includes you win")
 				get_parent().hacked = true
+				emit_signal("hacked")
 
 

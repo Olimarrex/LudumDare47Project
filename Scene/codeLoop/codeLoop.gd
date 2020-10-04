@@ -5,6 +5,8 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
+signal hacked
+
 var tiles = [
 	[false,false,false,false,false],
 	[false,false,false,false,false],
@@ -26,7 +28,10 @@ var hacked = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$codeBlock.connect("hacked", self, "isHacked")
+	
+func isHacked():
+	emit_signal("hacked")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

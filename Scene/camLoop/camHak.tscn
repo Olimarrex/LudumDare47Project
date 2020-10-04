@@ -378,13 +378,13 @@ position = Vector2( 158, 121 )
 scale = Vector2( 4, 4 )
 z_index = -1
 frames = SubResource( 159 )
-frame = 26
+frame = 18
 playing = true
 
 [node name="AnimatedSprite" parent="." instance=ExtResource( 6 )]
 visible = false
 position = Vector2( 158, 121 )
-frame = 42
+frame = 13
 
 [node name="Untitled-1" type="Sprite" parent="."]
 material = SubResource( 108 )
