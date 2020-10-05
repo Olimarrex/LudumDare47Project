@@ -8,7 +8,8 @@ extends TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	if(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")) > -40):
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), -36)
 
 var soundOffTex = preload("res://Oli/MainMenu/musicOff.png");
 var soundOnTex = preload("res://Oli/MainMenu/musicOn.png");
@@ -23,7 +24,7 @@ func _gui_input(event):
 			hasSound = !hasSound;
 			if(hasSound):
 				print("a");
-				AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), 0)
+				AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), -36)
 			else:
 				AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), -10000)
 			$".".texture = soundTex[int(hasSound)];
