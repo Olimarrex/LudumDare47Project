@@ -1020,11 +1020,9 @@ visible = false
 position = Vector2( -576, 198 )
 
 [node name="UI" parent="." instance=ExtResource( 1 )]
-visible = false
 position = Vector2( 940, 0 )
 
 [node name="Player" type="Sprite" parent="."]
-visible = false
 position = Vector2( 491, 408 )
 texture = ExtResource( 5 )
 [connection signal="input_event" from="Node2D/Area2D" to="Node2D" method="_on_Area2D_input_event"]
