@@ -14,7 +14,8 @@ var startTime = OS.get_ticks_msec()
 
 func nextLevel():
 	print(startTime," : ", OS.get_ticks_msec()," : ", OS.get_ticks_msec()-startTime)
-	if get_child_count()>0:get_child(0).queue_free()
+	get_child(1).queue_free()
+
 	onLevel+=1
 	if onLevel >= len(levels):
 		print("done")
