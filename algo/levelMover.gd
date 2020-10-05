@@ -106,7 +106,7 @@ func _on_Area2D_input_event(_viewport, event, _shape_idx):
 		if sTile[1] > 0 :swopCode(sTile[1])
 		if sTile[2] > 0 :swopCode(sTile[2])
 		
-		
+
 
 func checkDoneCam(check):
 	if(!hasDoneCam && check):
