@@ -21,4 +21,9 @@ func _gui_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
 			hasSound = !hasSound;
+			if(hasSound):
+				print("a");
+				AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), 0)
+			else:
+				AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), -10000)
 			$".".texture = soundTex[int(hasSound)];
