@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://Scene/UI/UI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://algo/test4doors (4).png" type="Texture" id=2]
@@ -68,6 +68,7 @@
 [ext_resource path="res://Scene/level/RedWall.png" type="Texture" id=66]
 [ext_resource path="res://Scene/level/ShitVase.png" type="Texture" id=67]
 [ext_resource path="res://algo/level1Dater.gd" type="Script" id=68]
+[ext_resource path="res://Scene/level/SteelDoorShutGreen.png" type="Texture" id=69]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
@@ -948,6 +949,20 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 61/shape_one_way_margin = 0.0
 61/shapes = [  ]
 61/z_index = 0
+62/name = "SteelDoorShutGreen.png 62"
+62/texture = ExtResource( 69 )
+62/tex_offset = Vector2( 0, 0 )
+62/modulate = Color( 1, 1, 1, 1 )
+62/region = Rect2( 0, 0, 256, 256 )
+62/tile_mode = 0
+62/occluder_offset = Vector2( 0, 0 )
+62/navigation_offset = Vector2( 0, 0 )
+62/shape_offset = Vector2( 0, 0 )
+62/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+62/shape_one_way = false
+62/shape_one_way_margin = 0.0
+62/shapes = [  ]
+62/z_index = 0
 
 [node name="level1" type="Node2D"]
 script = ExtResource( 68 )
