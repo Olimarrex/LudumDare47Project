@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Sound.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Oli/MainMenu/Sound.gd" type="Script" id=1]
+[ext_resource path="res://Oli/MainMenu/musicOn.png" type="Texture" id=2]
 [ext_resource path="res://Oli/MainMenu/StartButFurtherOut.png" type="Texture" id=3]
 [ext_resource path="res://Oli/MainMenu/AnimationPlayer.gd" type="Script" id=4]
 [ext_resource path="res://Oli/MainMenu/Start.png" type="Texture" id=5]
@@ -28,7 +29,17 @@ tracks/0/keys = {
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 7 )
 
-[node name="Sound" parent="." instance=ExtResource( 1 )]
+[node name="Sound" type="TextureRect" parent="."]
+margin_left = 1210.0
+margin_top = 25.0
+margin_right = 1370.0
+margin_bottom = 142.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="StartButton" type="TextureRect" parent="."]
 margin_left = 24.0

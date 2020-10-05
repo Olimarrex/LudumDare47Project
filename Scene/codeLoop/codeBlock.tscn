@@ -37,9 +37,10 @@ shape = SubResource( 1 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = -32.0
-margin_top = 18.0
+margin_top = -32.0
 margin_right = 32.0
 margin_bottom = 32.0
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

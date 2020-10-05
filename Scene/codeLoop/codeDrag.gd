@@ -13,6 +13,10 @@ var hitPre = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+
+	$icon.rotation += rotation
+	$Area2D/rotater.rotation += rotation
+	rotation = 0
 	if blockType == "":blockType = "middle"
 	if blockType == "Start" or blockType == "End":
 		movable = false
@@ -147,7 +151,15 @@ func _on_Timer_timeout():
 
 
 func _on_Area2D_mouse_entered():
-	$Label.text  = blockType
+	if blockType == "Start": $Label.text = "the start"
+	if blockType == "End": $Label.text = "the end you dont want it to get heir"
+	if blockType == "noMove":$Label.text = "you cant move this"
+	if blockType == "includ":$Label.text = "you have to include this in the loop"
+	if blockType == "exclud":$Label.text = "you cant inclut this in the loop"
+	if blockType == "solid":$Label.text = "a block"
+	if blockType == "middle":$Label.text = "moveable spinable"
+	
+
 
 
 
