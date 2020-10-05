@@ -25,11 +25,9 @@ func _ready():
 
 func unlock(id):
 	print("open: ", id)
-	if id == 1:$Node2D/mover/TileMap3.set_cell(-2, 19, 3)
-	if id == 2:$Node2D/mover/TileMap2.set_cell(-14, 16, 3)
-	if id == 3:$Node2D/mover/TileMap3.set_cell(-26, 7, 8)
-	if id == 4:$Node2D/mover/TileMap2.set_cell(-26, 1, 13)
-	if id == 5:$Node2D/mover/TileMap2.set_cell(-22, 4, 3)
+	if id == 11:$Node2D/mover/TileMap4.set_cell(-22, 4, 3)
+	if id == 12:$Node2D/mover/TileMap3.set_cell(-26, 7, 3)
+	if id == 13:$Node2D/mover/TileMap2.set_cell(-22, 10, 3)
 	
 	
 func win():
