@@ -55,7 +55,9 @@ func _process(_delta):
 		loopIn = int((($in.position[0]-8)/28)*5)
 		loopOut = int((($out.position[0]-30)/28)*5)
 		print("loop ", loopIn, "  ", loopOut)
-		if loopIn == loopFrams[idn][0] and loopOut == loopFrams[idn][1]:
+		print(loopFrams[idn])
+		print(loopIn >= loopFrams[idn][0]-1 , loopIn <= loopFrams[idn][0]+1  , loopOut <= loopFrams[idn][1]+1 , loopOut >= loopFrams[idn][1]-1)
+		if loopIn >= loopFrams[idn][0]-1 and loopIn <= loopFrams[idn][0]+1  and loopOut <= loopFrams[idn][1]+1 and loopOut >= loopFrams[idn][1]-1:
 			looped = true
 			print("it looped")
 			emit_signal("looped")

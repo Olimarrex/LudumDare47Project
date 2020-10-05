@@ -37,6 +37,7 @@ rotation = 1.5708
 
 [node name="codeBlock6" parent="." instance=ExtResource( 1 )]
 position = Vector2( 160, 352 )
+blockType = "End"
 
 [node name="codeBlock7" parent="." instance=ExtResource( 1 )]
 position = Vector2( 224, 96 )

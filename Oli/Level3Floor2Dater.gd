@@ -9,8 +9,8 @@ signal nextLevel
 var loss = false
 
 var tileMap = [
-[[ -1,-1,-1],[-1, 0,-1],[-1, 0,-1],[-1, 0,-1],[-1,-1,-1]],
-[[ -1,-1, 0],[-1, 0,-1],[-1, 0,-1],[-1, 0,-1],[-1, 0, 0]],
+[[ -1,-1,-1],[-1, 0,-1],[-1, 0,-1],[-1,20,-1],[-1,-1,-1]],
+[[ -1,-1,18],[-1,19,-1],[-1, 0,-1],[-1, 0,-1],[-1, 0, 0]],
 [[ -1,-1, 0],[-1,-1, 0],[-1, 0, 0],[-1, 0, 0],[-1, 0, 0]]]
 
 var onSprighTile =  Vector2(-18, 7)
@@ -19,11 +19,10 @@ var winTile = Vector2(0,3)
 
 func unlock(id):
 	print("open: ", id)
-	if id == 1:$Node2D/mover/TileMap3.set_cell(-2, 19, 3)
-	if id == 2:$Node2D/mover/TileMap2.set_cell(-14, 16, 3)
-	if id == 3:$Node2D/mover/TileMap3.set_cell(-26, 7, 8)
-	if id == 4:$Node2D/mover/TileMap2.set_cell(-26, 1, 13)
-	if id == 5:$Node2D/mover/TileMap2.set_cell(-22, 4, 3)
+	if id == 18:$Node2D/mover/Wall.set_cell(-38, -2, 47, true)
+	if id == 19:$Node2D/mover/Wall.set_cell(-34, 1, 47)
+	if id == 20:$Node2D/mover/Wall3.set_cell(-22, 4, 47)
+
 	
 	
 func win():
