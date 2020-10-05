@@ -1130,6 +1130,7 @@ texture = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource( 76 )]
 stream = ExtResource( 77 )
+volume_db = -35.0
 
 [node name="AcceptDialog" type="AcceptDialog" parent="."]
 margin_right = 450.0
