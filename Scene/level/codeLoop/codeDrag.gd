@@ -136,10 +136,7 @@ func _on_Timer_timeout():
 		ray.enabled = false
 		
 		if get_parent().inLoop:
-			if get_parent().hitEx:
-				print("loop whith EX")
-			elif get_parent().includ == 0:
-				#print("looped whith all includes you win")
+			if not get_parent().hitEx and get_parent().includ == 0:
 				get_parent().hacked = true
 				emit_signal("hacked")
 

@@ -215,5 +215,5 @@ position = Vector2( 160, 120 )
 scale = Vector2( 4, 4 )
 z_index = -1
 frames = SubResource( 51 )
-frame = 39
+frame = 11
 playing = true
