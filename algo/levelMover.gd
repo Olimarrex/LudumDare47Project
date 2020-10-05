@@ -122,7 +122,7 @@ func checkDoneCam(check):
 #up
 func _on_Area2D2_input_event_up(_viewport, event, _shape_idx):
 	if event.is_action_pressed("click"):
-		#print("up",onTile, tileMap [onTile[0]] [onTile[1]])
+		print("up",onTile, tileMap [onTile[0]] [onTile[1]])
 		if $mover/flore.get_cell(onSprighTile[0]+4, onSprighTile[1]-3) >= 0: 
 			#if tileMap [onTile[0]] [onTile[1]][2] != -1:
 			if unlocked.has(tileMap [onTile[0]] [onTile[1]][2]):
@@ -135,7 +135,7 @@ func _on_Area2D2_input_event_up(_viewport, event, _shape_idx):
 					if get_parent().get_node("UI/camLoop").looped:loopedCams.append(get_parent().get_node("UI/camLoop").idn)
 					else: loos()
 				if onTile == winTile:win()
-			elif $mover/flore.get_cell(onSprighTile[0]+4, onSprighTile[1]-3) > 0: 
+			elif tileMap [onTile[0]] [onTile[1]][2] > 0: 
 				get_parent().get_node("AudioStreamPlayer/DoorLocked").play();
 				
 	if event.is_action_pressed("Rclick"):
@@ -167,7 +167,7 @@ func _on_Area2D3_input_event_left(_viewport, event, _shape_idx):
 					if get_parent().get_node("UI/camLoop").looped:loopedCams.append(get_parent().get_node("UI/camLoop").idn)
 					else: loos()
 				if onTile == winTile:win()
-			elif $mover/flore.get_cell(onSprighTile[0]+4, onSprighTile[1]+3) > 0:
+			elif tileMap [onTile[0]] [onTile[1]+1][1] > 0:
 				get_parent().get_node("AudioStreamPlayer/DoorLocked").play();
 				
 	if event.is_action_pressed("Rclick"):
@@ -196,7 +196,7 @@ func _on_Area2D4_input_event_down(_viewport, event, _shape_idx):
 					if get_parent().get_node("UI/camLoop").looped:loopedCams.append(get_parent().get_node("UI/camLoop").idn)
 					else: loos()
 				if onTile == winTile:win()
-			elif($mover/flore.get_cell(onSprighTile[0]-4, onSprighTile[1]+3) > 0):
+			elif(tileMap [onTile[0]+1] [onTile[1]][2] > 0):
 				get_parent().get_node("AudioStreamPlayer/DoorLocked").play();
 	if event.is_action_pressed("Rclick"):
 		$slector.position = sDown
@@ -209,7 +209,7 @@ func _on_Area2D4_input_event_down(_viewport, event, _shape_idx):
 #left
 func _on_Area2D5_input_event_right(_viewport, event, _shape_idx):
 	if event.is_action_pressed("click"):
-		#print("left",onTile, tileMap [onTile[0]] [onTile[1]])
+		print("left",onTile, tileMap [onTile[0]] [onTile[1]])
 		if $mover/flore.get_cell(onSprighTile[0]-4, onSprighTile[1]-3) >= 0:
 			if tileMap [onTile[0]] [onTile[1]][1] != -1:
 				if unlocked.has(tileMap [onTile[0]] [onTile[1]][1]):
@@ -222,7 +222,7 @@ func _on_Area2D5_input_event_right(_viewport, event, _shape_idx):
 					if get_parent().get_node("UI/camLoop").looped:loopedCams.append(get_parent().get_node("UI/camLoop").idn)
 					else: loos()
 				if onTile == winTile:win()
-			elif(tileMap [onTile[0]] [onTile[1]][1] > 0):
+			elif(tileMap [onTile[0]+1] [onTile[1]][1] > 0):
 				get_parent().get_node("AudioStreamPlayer/DoorLocked").play();
 	if event.is_action_pressed("Rclick"):
 		$slector.position = sLeft
