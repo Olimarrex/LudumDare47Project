@@ -9,10 +9,10 @@ signal nextLevel
 var loss = false
 
 var tileMap = [
-[[ -1,-1,-1],[-1, 0,-1],[-1,-1,-1],[-1, 0,-1],[-1, 0,-1],[-1,-1, 0]],
-[[ -1,-1, 0],[-1, 0, 0],[ 6, 0, 0],[-1, 0,-1],[ 7, 0,-1],[-1,-1, 0]],
+[[ -1,-1,-1],[-1, 0,-1],[-1,-1,-1],[-1,16,-1],[-1, 0,-1],[-1,-1, 0]],
+[[ -1,-1, 0],[-1, 0, 0],[ 6,15, 0],[-1,17,-1],[ 7, 0,-1],[-1,-1, 0]],
 [[ -1,-1, 0],[-1, 0, 0],[-1,-1, 0],[-1,-1, 0],[-1, 0, 0],[-1,-1, 0]],
-[[ -1, 0,-1],[-1, 0,-1],[ 5, 0, 0],[-1, 0,-1],[-1, 0,-1],[-1, 0, 0]],]
+[[ -1, 0,-1],[-1, 0,-1],[ 5, 0,14],[-1, 0,-1],[-1, 0,-1],[-1, 0, 0]],]
 
 var onSprighTile =  Vector2(-14, 22)
 var onTile = Vector2(3,5)
@@ -23,11 +23,11 @@ func _ready():
 
 func unlock(id):
 	print("open: ", id)
-	if id == 1:$Node2D/mover/TileMap3.set_cell(-2, 19, 3)
-	if id == 2:$Node2D/mover/TileMap2.set_cell(-14, 16, 3)
-	if id == 3:$Node2D/mover/TileMap3.set_cell(-26, 7, 8)
-	if id == 4:$Node2D/mover/TileMap2.set_cell(-26, 1, 13)
-	if id == 5:$Node2D/mover/TileMap2.set_cell(-22, 4, 3)
+	if id == 14:$Node2D/mover/TileMap3.set_cell(-26, 13, 47, true)
+	if id == 15:$Node2D/mover/TileMap3.set_cell(-18,  7, 47)
+	if id == 16:$Node2D/mover/TileMap3.set_cell(-10,  7, 47)
+	if id == 17:$Node2D/mover/TileMap2.set_cell(-14, 10, 47)
+
 	
 	
 func win():

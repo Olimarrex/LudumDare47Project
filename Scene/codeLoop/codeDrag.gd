@@ -13,6 +13,7 @@ var hitPre = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if blockType == "":blockType = "middle"
 	if blockType == "Start" or blockType == "End":
 		movable = false
 	self.get_parent().get_node("Timer").connect("timeout", self, "_on_Timer_timeout")
@@ -61,6 +62,8 @@ func _ready():
 
 
 func _on_Area2D_input_event(_viewport, event, _shape_idx):
+	#print(blockType)
+	if dragging:$Label.text = ""
 	if movable:
 		if event.is_action_pressed("click"):
 			dragging = true
@@ -141,3 +144,12 @@ func _on_Timer_timeout():
 				emit_signal("hacked")
 
 
+
+
+func _on_Area2D_mouse_entered():
+	$Label.text  = blockType
+
+
+
+func _on_Area2D_mouse_exited():
+	$Label.text  = ""

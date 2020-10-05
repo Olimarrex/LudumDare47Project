@@ -70,10 +70,9 @@ func win():
 	if not loss:get_parent().win()
 	
 func loos():
-	pass
-	#loss = true
-	#get_parent().get_node("AudioStreamPlayer/alarm").play()
-	#get_parent().get_node("AudioStreamPlayer/AnimationPlayer").play("New Anim")
+	loss = true
+	get_parent().get_node("AudioStreamPlayer/alarm").play()
+	get_parent().get_node("AudioStreamPlayer/AnimationPlayer").play("New Anim")
 	
 	
 	
