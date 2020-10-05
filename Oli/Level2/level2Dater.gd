@@ -4,6 +4,10 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+signal nextLevel
+
+var loss = false
+
 var tileMap = [
 [[ -1, 0, 0],[-1, 0, 0],[-1, 0, 0],[-1, 0, 0],[-1, 0, 0],[-1, 0, 0],[-1, 0, 0],[-1, 0, 0],[-1, 0, 0],[-1, 0, 0]],
 [[ -1, 0, 0],[-1, 0, 0],[-1,-1,-1],[-1,-1,-1],[-1, 0,-1],[-1, 0,-1],[-1,-1,-1],[-1, 0,-1],[-1,-1, 0],[-1, 0, 0]],
@@ -27,7 +31,25 @@ func unlock(id):
 	if id == 5:$Node2D/mover/TileMap2.set_cell(-22, 4, 3)
 	
 	
-	
+func win():
+	print("you win!")
+	$UI.queue_free()
+	$Node2D.queue_free()
+	$AudioStreamPlayer.queue_free()
+	$Player.queue_free()
+	add_child(load("res://Scene/UI/win.tscn").instance())
+
+func next():
+	print('next')
+	emit_signal("nextLevel")
+
+func loos():
+	print("you loos")
+	$UI.queue_free()
+	$Node2D.queue_free()
+	$AudioStreamPlayer.queue_free()
+	$Player.queue_free()
+	add_child(load("res://Scene/UI/lost.tscn").instance())
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

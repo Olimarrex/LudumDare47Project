@@ -9,7 +9,7 @@ var onSprighTile = Vector2(-18, 7)
 var locked = []
 
 
-
+var loss = false
 var sUp = Vector2(-322, 254)
 var sRight = Vector2(-322, 448)
 var sDown = Vector2(-578, 445)
@@ -60,20 +60,12 @@ func isHacked():
 		get_parent().unlock(codeID)
 		
 func win():
-	print("you win!")
-	get_parent().get_node("UI").queue_free()
-	get_parent().get_node("Node2D").queue_free()
-	get_parent().get_node("AudioStreamPlayer").queue_free()
-	get_parent().get_node("Player").queue_free()
-	#get_parent().add_child(load("res://Scene/UI/lost.tscn").instance())
-
+	if not loss:get_parent().win()
+	
 func loos():
-	print("you loos")
-	get_parent().get_node("UI").queue_free()
-	get_parent().get_node("Node2D").queue_free()
-	get_parent().get_node("AudioStreamPlayer").queue_free()
-	get_parent().get_node("Player").queue_free()
-	get_parent().add_child(load("res://Scene/UI/lost.tscn").instance())
+	loss = true
+	get_parent().get_node("AudioStreamPlayer/alarm").play()
+	get_parent().get_node("AudioStreamPlayer/AnimationPlayer").play("New Anim")
 	
 	
 	
