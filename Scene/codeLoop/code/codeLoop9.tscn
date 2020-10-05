@@ -1,0 +1,134 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scene/codeLoop/codeBlock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/codeLoop/back.png" type="Texture" id=2]
+[ext_resource path="res://Scene/codeLoop/codeLoop.gd" type="Script" id=3]
+
+[node name="codeLoop" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="back" type="Sprite" parent="."]
+position = Vector2( 160, 192 )
+texture = ExtResource( 2 )
+
+[node name="codeBlock" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, 96 )
+blockType = "Start"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="codeBlock2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, 96 )
+
+[node name="codeBlock3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, 96 )
+rotation = 1.5708
+
+[node name="codeBlock4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, 160 )
+rotation = 1.5708
+
+[node name="codeBlock5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, 224 )
+rotation = 1.5708
+
+[node name="codeBlock6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, 288 )
+rotation = 3.14159
+
+[node name="codeBlock7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, 288 )
+rotation = 3.14159
+
+[node name="codeBlock8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, 288 )
+rotation = -1.5708
+
+[node name="codeBlock9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, 224 )
+rotation = -1.5708
+
+[node name="codeBlock10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, 160 )
+
+[node name="codeBlock11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, 160 )
+rotation = -1.5708
+blockType = "End"
+
+[node name="codeBlock12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, 224 )
+blockType = "solid"
+
+[node name="codeBlock13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 32 )
+blockType = "solid"
+
+[node name="codeBlock14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, 32 )
+blockType = "solid"
+
+[node name="codeBlock15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, 32 )
+blockType = "solid"
+
+[node name="codeBlock16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, 32 )
+blockType = "solid"
+
+[node name="codeBlock17" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 32 )
+blockType = "solid"
+
+[node name="codeBlock18" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 96 )
+blockType = "solid"
+
+[node name="codeBlock19" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 160 )
+blockType = "solid"
+
+[node name="codeBlock20" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 224 )
+blockType = "solid"
+
+[node name="codeBlock21" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 288 )
+blockType = "solid"
+
+[node name="codeBlock22" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 352 )
+blockType = "solid"
+
+[node name="codeBlock23" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, 352 )
+blockType = "solid"
+
+[node name="codeBlock24" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, 352 )
+blockType = "solid"
+
+[node name="codeBlock25" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, 352 )
+blockType = "solid"
+
+[node name="codeBlock26" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 352 )
+blockType = "solid"
+
+[node name="codeBlock27" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 288 )
+blockType = "solid"
+
+[node name="codeBlock28" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 224 )
+blockType = "solid"
+
+[node name="codeBlock29" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 160 )
+blockType = "solid"
+
+[node name="codeBlock30" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 96 )
+blockType = "solid"

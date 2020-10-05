@@ -7,7 +7,7 @@ extends Node2D
 var playTime = 0.0
 var vid = Node2D
 var loop = Vector2(0,50)
-var loopFrams = {0:[0,49], 1:[15,30], 2:[7,46]}
+var loopFrams = {0:[0,49], 1:[14,29], 2:[6,45], 3:[21, 40], 4:[39, 41], 5:[19, 36], 6:[24, 36], 7:[17, 40]}
 var loopIn = 0
 var loopOut = 0
 var idn = 0

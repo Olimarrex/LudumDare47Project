@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=80 format=2]
 
 [ext_resource path="res://Scene/UI/UI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://algo/test4doors (4).png" type="Texture" id=2]
@@ -67,7 +67,7 @@
 [ext_resource path="res://Scene/level/PlantDarker.png" type="Texture" id=65]
 [ext_resource path="res://Scene/level/RedWall.png" type="Texture" id=66]
 [ext_resource path="res://Scene/level/ShitVase.png" type="Texture" id=67]
-[ext_resource path="res://algo/level1Dater.gd" type="Script" id=68]
+[ext_resource path="res://Oli/level1floor2Dater.gd" type="Script" id=68]
 [ext_resource path="res://Scene/level/SteelDoorShutGreen.png" type="Texture" id=69]
 [ext_resource path="res://Scene/level/Armchair2.png" type="Texture" id=70]
 [ext_resource path="res://Scene/level/StairsGreen.png" type="Texture" id=71]
@@ -75,6 +75,8 @@
 [ext_resource path="res://Scene/level/StairsDown.png" type="Texture" id=73]
 [ext_resource path="res://Scene/level/SecBot.png" type="Texture" id=74]
 [ext_resource path="res://Scene/level/SteelDoorOpenGreen.png" type="Texture" id=75]
+[ext_resource path="res://Scene/AudioStreamPlayer.tscn" type="PackedScene" id=76]
+[ext_resource path="res://music/MansionFinal.ogg" type="AudioStream" id=77]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
@@ -1106,37 +1108,35 @@ format = 1
 tile_data = PoolIntArray( 131046, 536870940, 0, 196581, 24, 0, 458722, 36, 0, 524253, 68, 0, 589793, 56, 0 )
 
 [node name="slector" type="Sprite" parent="Node2D"]
-visible = false
 position = Vector2( -579, 254 )
 texture = ExtResource( 23 )
 
 [node name="Area2D" parent="Node2D" instance=ExtResource( 3 )]
-visible = false
 position = Vector2( -448, 294 )
 
 [node name="Area2D2" parent="Node2D" instance=ExtResource( 3 )]
-visible = false
 position = Vector2( -320, 198 )
 
 [node name="Area2D3" parent="Node2D" instance=ExtResource( 3 )]
-visible = false
 position = Vector2( -320, 390 )
 
 [node name="Area2D4" parent="Node2D" instance=ExtResource( 3 )]
-visible = false
 position = Vector2( -576, 390 )
 
 [node name="Area2D5" parent="Node2D" instance=ExtResource( 3 )]
-visible = false
 position = Vector2( -576, 198 )
 
 [node name="UI" parent="." instance=ExtResource( 1 )]
-visible = false
 position = Vector2( 940, 0 )
 
 [node name="Player" type="Sprite" parent="."]
 position = Vector2( 491, 408 )
 texture = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 76 )]
+stream = ExtResource( 77 )
+volume_db = -21.081
+autoplay = false
 [connection signal="input_event" from="Node2D/Area2D" to="Node2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Node2D/Area2D2" to="Node2D" method="_on_Area2D2_input_event_up"]
 [connection signal="input_event" from="Node2D/Area2D3" to="Node2D" method="_on_Area2D3_input_event_left"]

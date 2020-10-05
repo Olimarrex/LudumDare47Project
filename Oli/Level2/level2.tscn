@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://Scene/UI/UI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://algo/test4doors (4).png" type="Texture" id=2]
@@ -68,10 +68,8 @@
 [ext_resource path="res://Scene/level/RedWall.png" type="Texture" id=66]
 [ext_resource path="res://Scene/level/ShitVase.png" type="Texture" id=67]
 [ext_resource path="res://Oli/Level2/level2Dater.gd" type="Script" id=68]
-[ext_resource path="res://music/Bank.ogg" type="AudioStream" id=69]
+[ext_resource path="res://Scene/AudioStreamPlayer.tscn" type="PackedScene" id=69]
 [ext_resource path="res://Scene/dek/iconP.png" type="Texture" id=70]
-[ext_resource path="res://sounds/Alarm.ogg" type="AudioStream" id=71]
-[ext_resource path="res://Scene/UI/failscreen.png" type="Texture" id=72]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
@@ -953,36 +951,6 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 61/shapes = [  ]
 61/z_index = 0
 
-[sub_resource type="Animation" id=3]
-resource_name = "New Anim"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("failscreen:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath("..")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 1.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "loos"
-} ]
-}
-
 [node name="level2" type="Node2D"]
 script = ExtResource( 68 )
 __meta__ = {
@@ -1039,6 +1007,10 @@ cell_y_sort = true
 format = 1
 tile_data = PoolIntArray( -65566, 536870936, 0, -21, 536870947, 0, 131054, 30, 0, 196589, 26, 0, 393191, 536870963, 0, 589803, 536870963, 0, 720890, 536870930, 0, 786415, 536870963, 0, 917494, 24, 0, 1114099, 536870930, 0 )
 
+[node name="iconP" type="Sprite" parent="Node2D/mover"]
+position = Vector2( -534.79, 119.107 )
+texture = ExtResource( 70 )
+
 [node name="slector" type="Sprite" parent="Node2D"]
 position = Vector2( -579, 254 )
 texture = ExtResource( 23 )
@@ -1058,27 +1030,10 @@ position = Vector2( -576, 390 )
 [node name="Area2D5" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( -576, 198 )
 
-[node name="iconP" type="Sprite" parent="Node2D"]
-position = Vector2( -1046.79, -264.893 )
-texture = ExtResource( 70 )
-
 [node name="UI" parent="." instance=ExtResource( 1 )]
 position = Vector2( 940, 0 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 69 )
-autoplay = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AudioStreamPlayer"]
-"anims/New Anim" = SubResource( 3 )
-
-[node name="failscreen" type="Sprite" parent="AudioStreamPlayer"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 640, 360 )
-texture = ExtResource( 72 )
-
-[node name="alarm" type="AudioStreamPlayer" parent="AudioStreamPlayer"]
-stream = ExtResource( 71 )
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 69 )]
 
 [node name="Player" type="Sprite" parent="."]
 position = Vector2( 489.055, 395.085 )

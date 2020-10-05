@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://Scene/UI/UI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://algo/test4doors (4).png" type="Texture" id=2]
@@ -67,7 +67,9 @@
 [ext_resource path="res://Scene/level/PlantDarker.png" type="Texture" id=65]
 [ext_resource path="res://Scene/level/RedWall.png" type="Texture" id=66]
 [ext_resource path="res://Scene/level/ShitVase.png" type="Texture" id=67]
-[ext_resource path="res://algo/level1Dater.gd" type="Script" id=68]
+[ext_resource path="res://Scene/AudioStreamPlayer.tscn" type="PackedScene" id=68]
+[ext_resource path="res://music/MobBase.ogg" type="AudioStream" id=69]
+[ext_resource path="res://Oli/Level3Dater.gd" type="Script" id=70]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
@@ -949,8 +951,8 @@ points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
 61/shapes = [  ]
 61/z_index = 0
 
-[node name="level1" type="Node2D"]
-script = ExtResource( 68 )
+[node name="level3" type="Node2D"]
+script = ExtResource( 70 )
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 940, 0 )
@@ -958,6 +960,7 @@ z_index = -2
 script = ExtResource( 4 )
 
 [node name="mover" type="Node2D" parent="Node2D"]
+position = Vector2( -128, -480 )
 
 [node name="flore" type="TileMap" parent="Node2D/mover"]
 tile_set = SubResource( 2 )
@@ -995,28 +998,22 @@ format = 1
 tile_data = PoolIntArray( -65558, 536870967, 0, 65518, 56, 0, 458735, 536870936, 0, 524270, 42, 0, 524278, 536870956, 0, 917478, 536870935, 0, 917494, 536870936, 0 )
 
 [node name="slector" type="Sprite" parent="Node2D"]
-visible = false
 position = Vector2( -579, 254 )
 texture = ExtResource( 23 )
 
 [node name="Area2D" parent="Node2D" instance=ExtResource( 3 )]
-visible = false
 position = Vector2( -448, 294 )
 
 [node name="Area2D2" parent="Node2D" instance=ExtResource( 3 )]
-visible = false
 position = Vector2( -320, 198 )
 
 [node name="Area2D3" parent="Node2D" instance=ExtResource( 3 )]
-visible = false
 position = Vector2( -320, 390 )
 
 [node name="Area2D4" parent="Node2D" instance=ExtResource( 3 )]
-visible = false
 position = Vector2( -576, 390 )
 
 [node name="Area2D5" parent="Node2D" instance=ExtResource( 3 )]
-visible = false
 position = Vector2( -576, 198 )
 
 [node name="UI" parent="." instance=ExtResource( 1 )]
@@ -1025,6 +1022,9 @@ position = Vector2( 940, 0 )
 [node name="Player" type="Sprite" parent="."]
 position = Vector2( 491, 408 )
 texture = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 68 )]
+stream = ExtResource( 69 )
 [connection signal="input_event" from="Node2D/Area2D" to="Node2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Node2D/Area2D2" to="Node2D" method="_on_Area2D2_input_event_up"]
 [connection signal="input_event" from="Node2D/Area2D3" to="Node2D" method="_on_Area2D3_input_event_left"]

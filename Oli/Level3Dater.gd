@@ -9,15 +9,14 @@ signal nextLevel
 var loss = false
 
 var tileMap = [
-[[ -1, 0, 0],[-1, 0, 0],[-1, 0, 0],[-1, 0, 0],[-1, 0, 0],[-1, 0, 0],[-1, 0, 0],[-1, 0, 0],[-1, 0, 0],[-1, 0, 0]],
-[[ -1, 0, 0],[-1, 0, 0],[-1,-1,-1],[-1,-1,-1],[-1, 0,-1],[-1, 0,-1],[-1,-1,-1],[-1, 0,-1],[-1,-1, 0],[-1, 0, 0]],
-[[ -1, 0, 0],[ 1,-1,-1],[-1, 4, 0],[-1, 5, 0],[-1, 0, 0],[-1, 0, 0],[ 2,-1, 0],[-1, 0, 0],[-1, 1, 0],[-1, 0, 0]],
-[[ -1, 0, 0],[-1, 0,-1],[-1,-1, 0],[-1, 3,-1],[-1, 0,-1],[-1, 0,-1],[-1, 2, 0],[-1, 0, 0],[-1,-1, 0],[-1, 0, 0]],
-[[ -1, 0, 0],[-1, 0, 0],[-1, 0,-1],[-1, 0,-1],[-1, 0,-1],[-1, 0,-1],[-1, 0,-1],[-1, 0,-1],[-1, 0, 0],[-1, 0, 0]],]
+[[ -1,-1,-1],[-1, 0,-1],[-1,-1,-1],[-1, 0,-1],[-1, 0,-1],[-1,-1, 0]],
+[[ -1,-1, 0],[-1, 0, 0],[ 6, 0, 0],[-1, 0,-1],[ 7, 0,-1],[-1,-1, 0]],
+[[ -1,-1, 0],[-1, 0, 0],[-1,-1, 0],[-1,-1, 0],[-1, 0, 0],[-1,-1, 0]],
+[[ -1, 0,-1],[-1, 0,-1],[ 5, 0, 0],[-1, 0,-1],[-1, 0,-1],[-1, 0, 0]],]
 
-var onSprighTile =  Vector2(-2, 19)
-var onTile = Vector2(2,8)
-var winTile = Vector2(2,1)
+var onSprighTile =  Vector2(-14, 22)
+var onTile = Vector2(3,5)
+var winTile = Vector2(1,4)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -32,12 +31,7 @@ func unlock(id):
 	
 	
 func win():
-	print("you win!")
-	$UI.queue_free()
-	$Node2D.queue_free()
-	$AudioStreamPlayer.queue_free()
-	$Player.queue_free()
-	add_child(load("res://Scene/UI/win.tscn").instance())
+	get_parent().nextLevel()
 
 func next():
 	print('next')
