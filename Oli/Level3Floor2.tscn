@@ -1160,32 +1160,25 @@ format = 1
 tile_data = PoolIntArray( -393250, 54, 0, -65565, 24, 0, 131038, 536870956, 0, 327650, 536870956, 0, 458736, 36, 0, 524262, 536870956, 0, 720870, 21, 0 )
 
 [node name="slector" type="Sprite" parent="Node2D"]
-visible = false
 position = Vector2( -579, 254 )
 texture = ExtResource( 32 )
 
 [node name="Area2D" parent="Node2D" instance=ExtResource( 2 )]
-visible = false
 position = Vector2( -448, 294 )
 
 [node name="Area2D2" parent="Node2D" instance=ExtResource( 2 )]
-visible = false
 position = Vector2( -320, 198 )
 
 [node name="Area2D3" parent="Node2D" instance=ExtResource( 2 )]
-visible = false
 position = Vector2( -320, 390 )
 
 [node name="Area2D4" parent="Node2D" instance=ExtResource( 2 )]
-visible = false
 position = Vector2( -576, 390 )
 
 [node name="Area2D5" parent="Node2D" instance=ExtResource( 2 )]
-visible = false
 position = Vector2( -576, 198 )
 
 [node name="UI" parent="." instance=ExtResource( 3 )]
-visible = false
 position = Vector2( 940, 0 )
 
 [node name="Player" type="Sprite" parent="."]
