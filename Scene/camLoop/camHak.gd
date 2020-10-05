@@ -38,10 +38,12 @@ func loadVid(id=0):
 		$AnimationPlayer.play()
 		vid.z_index = -1
 		idn = id
+		return true;
 	else: 
 		vid.z_index = -2
 		$AnimationPlayer.seek(0, true)
 		$AnimationPlayer.stop()
+		return false;
 		
 
 

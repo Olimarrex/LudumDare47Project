@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=2]
+[gd_scene load_steps=81 format=2]
 
 [ext_resource path="res://Scene/UI/UI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://algo/test4doors (4).png" type="Texture" id=2]
@@ -77,6 +77,7 @@
 [ext_resource path="res://Scene/level/SteelDoorOpenGreen.png" type="Texture" id=75]
 [ext_resource path="res://Scene/AudioStreamPlayer.tscn" type="PackedScene" id=76]
 [ext_resource path="res://music/MansionFinal.ogg" type="AudioStream" id=77]
+[ext_resource path="res://algo/AcceptDialog.gd" type="Script" id=79]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 160, 128, 64, 256, 160, 128, 256, 0, 160 )
@@ -1129,6 +1130,39 @@ texture = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource( 76 )]
 stream = ExtResource( 77 )
+volume_db = -35.0
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+margin_right = 450.0
+margin_bottom = 149.979
+script = ExtResource( 79 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AcceptDialog"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 442.0
+margin_bottom = 113.979
+bbcode_text = ">Marcus is a banker, he hates his day job.
+
+>On the other hand, he loves his night job.
+
+Welcome to Night Job!
+Left click on surrounding tiles to move!
+Right click on surrounding tiles to interact!
+
+Your goal is to collect the valuable item inside the mansion?"
+text = ">Marcus is a banker, he hates his day job.
+
+>On the other hand, he loves his night job.
+
+Welcome to Night Job!
+Left click on surrounding tiles to move!
+Right click on surrounding tiles to interact!
+
+Your goal is to collect the valuable item inside the mansion?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="input_event" from="Node2D/Area2D" to="Node2D" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Node2D/Area2D2" to="Node2D" method="_on_Area2D2_input_event_up"]
 [connection signal="input_event" from="Node2D/Area2D3" to="Node2D" method="_on_Area2D3_input_event_left"]

@@ -23,8 +23,8 @@ var codeNodes = {}
 var codeID = 0
 var onTile = Vector2(3,2)
 var winTile = Vector2()
-
-
+var hasDoneCam = false
+var hasDoneCode = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,6 +35,11 @@ func _ready():
 	get_parent().get_node("UI").get_node("camLoop").connect("looped", self, "vidLoop")
 	
 func swopCode(id=0):
+	if(!hasDoneCode):
+		hasDoneCode = true
+		if(get_parent().get_node("AcceptDialog/RichTextLabel") != null):
+			get_parent().get_node("AcceptDialog/RichTextLabel").text = "These door locks only work because the start and end are connected together.\nIf we could make a loop somewhere, Sir, we could malfunction the lock, causing it to open itself up. \nSome blocks of code have special requirements! Hover over them for tooltips.";
+			get_parent().get_node("AcceptDialog").popup_centered();
 	if id == 0:
 		if codeID != 0:get_parent().get_node("UI").remove_child(codeNodes[codeID])
 		codeID = 0
@@ -93,7 +98,8 @@ func _on_Area2D_input_event(_viewport, event, _shape_idx):
 		#get_parent().get_node("UI").get_node("camLoop").loadVid()
 		$slector.position = sMiddle
 		var sTile = tileMap [onTile[0]] [onTile[1]]
-		get_parent().get_node("UI").get_node("camLoop").loadVid(sTile[0])
+		checkDoneCam(get_parent().get_node("UI").get_node("camLoop").loadVid(sTile[0]))
+		
 		if sTile[0] > -1 and loopedCams.has(sTile[0]):get_parent().get_node("UI").get_node("camLoop").solve()
 		if loopedCams.has(sTile[0]):get_parent().get_node("UI").get_node("unsolved").z_index = 0
 		else: get_parent().get_node("UI").get_node("unsolved").z_index = 1
@@ -103,7 +109,12 @@ func _on_Area2D_input_event(_viewport, event, _shape_idx):
 		
 		
 
-
+func checkDoneCam(check):
+	if(!hasDoneCam && check):
+		hasDoneCam = true;
+		if(get_parent().get_node("AcceptDialog/RichTextLabel") != null):
+			get_parent().get_node("AcceptDialog/RichTextLabel").text = "We need to get the cameras to loop at a certain section, Sir. Then we can slip past unnoticed.";
+			get_parent().get_node("AcceptDialog").popup_centered();
 #up
 func _on_Area2D2_input_event_up(_viewport, event, _shape_idx):
 	if event.is_action_pressed("click"):
@@ -121,10 +132,11 @@ func _on_Area2D2_input_event_up(_viewport, event, _shape_idx):
 				if onTile == winTile:win()
 				
 	if event.is_action_pressed("Rclick"):
+		
 		$slector.position = sUp
 		var sTile = tileMap [onTile[0]-1] [onTile[1]]
 		print(loopedCams, sTile)
-		get_parent().get_node("UI").get_node("camLoop").loadVid(sTile[0])
+		checkDoneCam(get_parent().get_node("UI").get_node("camLoop").loadVid(sTile[0]))
 		if sTile[0] > -1 and loopedCams.has(sTile[0]):get_parent().get_node("UI").get_node("camLoop").solve()
 		if loopedCams.has(sTile[0]):get_parent().get_node("UI").get_node("unsolved").z_index = 0
 		else: get_parent().get_node("UI").get_node("unsolved").z_index = 1
@@ -151,7 +163,7 @@ func _on_Area2D3_input_event_left(_viewport, event, _shape_idx):
 	if event.is_action_pressed("Rclick"):
 		$slector.position = sRight
 		var sTile = tileMap [onTile[0]] [onTile[1]+1]
-		get_parent().get_node("UI").get_node("camLoop").loadVid(sTile[0])
+		checkDoneCam(get_parent().get_node("UI").get_node("camLoop").loadVid(sTile[0]))
 		if sTile[0] > -1 and loopedCams.has(sTile[0]):get_parent().get_node("UI").get_node("camLoop").solve()
 		if loopedCams.has(sTile[0]):get_parent().get_node("UI").get_node("unsolved").z_index = 0
 		else: get_parent().get_node("UI").get_node("unsolved").z_index = 1
@@ -176,7 +188,7 @@ func _on_Area2D4_input_event_down(_viewport, event, _shape_idx):
 	if event.is_action_pressed("Rclick"):
 		$slector.position = sDown
 		var sTile = tileMap [onTile[0]+1] [onTile[1]]
-		get_parent().get_node("UI").get_node("camLoop").loadVid(sTile[0])
+		checkDoneCam(get_parent().get_node("UI").get_node("camLoop").loadVid(sTile[0]))
 		if sTile[0] > -1 and loopedCams.has(sTile[0]):get_parent().get_node("UI").get_node("camLoop").solve()
 		if sTile[1] <= 0 and sTile[2] <= 0:swopCode(0)		
 		if sTile[1] > 0 :swopCode(sTile[1])
@@ -199,7 +211,7 @@ func _on_Area2D5_input_event_right(_viewport, event, _shape_idx):
 	if event.is_action_pressed("Rclick"):
 		$slector.position = sLeft
 		var sTile = tileMap [onTile[0]] [onTile[1]-1]
-		get_parent().get_node("UI").get_node("camLoop").loadVid(sTile[0])
+		checkDoneCam(get_parent().get_node("UI").get_node("camLoop").loadVid(sTile[0]))
 		if sTile[0] > -1 and loopedCams.has(sTile[0]):get_parent().get_node("UI").get_node("camLoop").solve()
 		if loopedCams.has(sTile[0]):get_parent().get_node("UI").get_node("unsolved").z_index = 0
 		else: get_parent().get_node("UI").get_node("unsolved").z_index = 1
