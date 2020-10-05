@@ -12,136 +12,102 @@ position = Vector2( 160, 192 )
 texture = ExtResource( 2 )
 
 [node name="codeBlock" parent="." instance=ExtResource( 1 )]
-position = Vector2( 32, 32 )
+position = Vector2( 160, 32 )
+rotation = 1.5708
 blockType = "Start"
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
 [node name="codeBlock2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 96, 32 )
+position = Vector2( 160, 96 )
 
 [node name="codeBlock3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160, 32 )
+position = Vector2( 160, 160 )
+rotation = 1.5708
+blockType = "noMove"
 
 [node name="codeBlock4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 224, 32 )
+position = Vector2( 160, 224 )
+rotation = 3.14159
 
 [node name="codeBlock5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 288, 32 )
+position = Vector2( 160, 288 )
 rotation = 1.5708
-blockType = "exclud"
 
 [node name="codeBlock6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 32, 96 )
-rotation = 1.5708
+position = Vector2( 160, 352 )
 
 [node name="codeBlock7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, 96 )
+blockType = "exclud"
+
+[node name="codeBlock8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, 160 )
+rotation = 3.14159
+blockType = "exclud"
+
+[node name="codeBlock9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, 224 )
+blockType = "includ"
+
+[node name="codeBlock10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, 288 )
+rotation = 3.14159
+blockType = "includ"
+
+[node name="codeBlock11" parent="." instance=ExtResource( 1 )]
 position = Vector2( 96, 96 )
 rotation = 3.14159
 blockType = "includ"
 
-[node name="codeBlock8" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160, 96 )
-rotation = 3.14159
-blockType = "middle"
-
-[node name="codeBlock9" parent="." instance=ExtResource( 1 )]
-position = Vector2( 224, 96 )
-rotation = 3.14159
-blockType = "includ"
-
-[node name="codeBlock10" parent="." instance=ExtResource( 1 )]
-position = Vector2( 288, 96 )
-rotation = 3.14159
-blockType = "noMove"
-
-[node name="codeBlock11" parent="." instance=ExtResource( 1 )]
-position = Vector2( 32, 160 )
-blockType = "middle"
-
 [node name="codeBlock12" parent="." instance=ExtResource( 1 )]
 position = Vector2( 96, 160 )
-blockType = "exclud"
-
-[node name="codeBlock13" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160, 160 )
-blockType = "noMove"
-
-[node name="codeBlock14" parent="." instance=ExtResource( 1 )]
-position = Vector2( 224, 160 )
 blockType = "includ"
 
+[node name="codeBlock13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, 224 )
+rotation = 3.14159
+blockType = "exclud"
+
+[node name="codeBlock14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, 288 )
+blockType = "exclud"
+
 [node name="codeBlock15" parent="." instance=ExtResource( 1 )]
-position = Vector2( 288, 160 )
+position = Vector2( 32, 96 )
 rotation = 1.5708
+blockType = "noMove"
 
 [node name="codeBlock16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 160 )
+blockType = "noMove"
+
+[node name="codeBlock17" parent="." instance=ExtResource( 1 )]
 position = Vector2( 32, 224 )
 rotation = 1.5708
 blockType = "noMove"
 
-[node name="codeBlock17" parent="." instance=ExtResource( 1 )]
-position = Vector2( 96, 224 )
-rotation = 3.14159
-blockType = "noMove"
-
 [node name="codeBlock18" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160, 224 )
-rotation = 3.14159
-blockType = "middle"
-
-[node name="codeBlock19" parent="." instance=ExtResource( 1 )]
-position = Vector2( 224, 224 )
-rotation = 3.14159
-blockType = "noMove"
-
-[node name="codeBlock20" parent="." instance=ExtResource( 1 )]
-position = Vector2( 288, 224 )
-rotation = 3.14159
-
-[node name="codeBlock21" parent="." instance=ExtResource( 1 )]
 position = Vector2( 32, 288 )
 blockType = "noMove"
 
-[node name="codeBlock22" parent="." instance=ExtResource( 1 )]
-position = Vector2( 96, 288 )
-blockType = "includ"
-
-[node name="codeBlock23" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160, 288 )
-blockType = "middle"
-
-[node name="codeBlock24" parent="." instance=ExtResource( 1 )]
-position = Vector2( 224, 288 )
-blockType = "exclud"
-
-[node name="codeBlock25" parent="." instance=ExtResource( 1 )]
-position = Vector2( 288, 288 )
+[node name="codeBlock19" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 96 )
 rotation = 1.5708
-blockType = "includ"
+blockType = "noMove"
 
-[node name="codeBlock26" parent="." instance=ExtResource( 1 )]
-position = Vector2( 32, 352 )
-rotation = 1.5708
-blockType = "End"
-
-[node name="codeBlock27" parent="." instance=ExtResource( 1 )]
-position = Vector2( 96, 352 )
-rotation = 3.14159
-blockType = "exclud"
-
-[node name="codeBlock28" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160, 352 )
+[node name="codeBlock20" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 160 )
 rotation = 3.14159
 blockType = "noMove"
 
-[node name="codeBlock29" parent="." instance=ExtResource( 1 )]
-position = Vector2( 224, 352 )
-rotation = 3.14159
-blockType = "middle"
+[node name="codeBlock21" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 224 )
+rotation = 1.5708
+blockType = "noMove"
 
-[node name="codeBlock30" parent="." instance=ExtResource( 1 )]
-position = Vector2( 288, 352 )
+[node name="codeBlock22" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 288 )
 rotation = 3.14159
-blockType = "middle"
+blockType = "noMove"

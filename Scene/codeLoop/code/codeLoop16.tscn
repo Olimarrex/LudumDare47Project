@@ -12,45 +12,44 @@ position = Vector2( 160, 192 )
 texture = ExtResource( 2 )
 
 [node name="codeBlock" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160, 32 )
-rotation = 1.5708
+position = Vector2( 288, 160 )
+rotation = 3.14159
 blockType = "Start"
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
 [node name="codeBlock2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160, 160 )
-rotation = 1.5708
-blockType = "exclud"
+position = Vector2( 224, 160 )
+rotation = 3.14159
 
 [node name="codeBlock3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160, 224 )
-rotation = 1.5708
-blockType = "includ"
+position = Vector2( 160, 160 )
+rotation = 3.14159
 
 [node name="codeBlock4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160, 352 )
-blockType = "End"
+position = Vector2( 96, 160 )
+rotation = 3.14159
+blockType = "includ"
 
 [node name="codeBlock5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160, 96 )
+position = Vector2( 32, 160 )
 rotation = 1.5708
 
 [node name="codeBlock6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 160, 288 )
-rotation = 1.5708
+position = Vector2( 32, 224 )
 
 [node name="codeBlock7" parent="." instance=ExtResource( 1 )]
-position = Vector2( 96, 352 )
-
-[node name="codeBlock9" parent="." instance=ExtResource( 1 )]
-position = Vector2( 224, 352 )
-rotation = -3.14159
+position = Vector2( 96, 224 )
 
 [node name="codeBlock8" parent="." instance=ExtResource( 1 )]
-position = Vector2( 32, 352 )
+position = Vector2( 160, 224 )
+blockType = "includ"
+
+[node name="codeBlock9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, 224 )
 
 [node name="codeBlock10" parent="." instance=ExtResource( 1 )]
-position = Vector2( 288, 352 )
-rotation = 3.14159
+position = Vector2( 288, 224 )
+rotation = -1.5708
+blockType = "End"
