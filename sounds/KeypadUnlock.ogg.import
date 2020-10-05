@@ -11,5 +11,5 @@ dest_files=[ "res://.import/KeypadUnlock.ogg-382490d2de6acbfdff1c9e5b77719078.og
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

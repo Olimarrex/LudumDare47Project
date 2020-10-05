@@ -11,5 +11,5 @@ dest_files=[ "res://.import/AlgoMove.ogg-2072934abf15dd1ba420753d3c1b92a2.oggstr
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

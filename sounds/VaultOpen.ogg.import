@@ -11,5 +11,5 @@ dest_files=[ "res://.import/VaultOpen.ogg-31529ac022126831e8b9d4cc16e1da55.oggst
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

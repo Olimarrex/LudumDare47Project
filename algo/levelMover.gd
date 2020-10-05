@@ -64,6 +64,8 @@ func isHacked():
 	if not unlocked.has(codeID):
 		print("you hacked: ", codeID)
 		unlocked.append(codeID)
+		get_parent().get_node("AudioStreamPlayer/KeypadUnlock").play()
+		get_parent().get_node("AudioStreamPlayer/Door").play()
 		get_parent().unlock(codeID)
 		
 func win():
@@ -73,7 +75,6 @@ func loos():
 	loss = true
 	get_parent().get_node("AudioStreamPlayer/alarm").play()
 	get_parent().get_node("AudioStreamPlayer/AnimationPlayer").play("New Anim")
-	
 	
 	
 	
@@ -109,11 +110,15 @@ func _on_Area2D_input_event(_viewport, event, _shape_idx):
 
 
 func checkDoneCam(check):
-	if(!hasDoneCam && check):
-		hasDoneCam = true;
-		if(get_parent().get_node("AcceptDialog/RichTextLabel") != null):
-			get_parent().get_node("AcceptDialog/RichTextLabel").text = "We need to get the cameras to loop at a certain section, Sir. Then we can slip past unnoticed.";
-			get_parent().get_node("AcceptDialog").popup_centered();
+	if(check): 
+		get_parent().get_node("AudioStreamPlayer/Click&Hum").play();
+		if(!hasDoneCam):
+			hasDoneCam = true;	
+			if(get_parent().get_node("AcceptDialog/RichTextLabel") != null):
+				get_parent().get_node("AcceptDialog/RichTextLabel").text = "We need to get the cameras to loop at a certain section, Sir. Then we can slip past unnoticed.";
+				get_parent().get_node("AcceptDialog").popup_centered();
+	else:
+		get_parent().get_node("AudioStreamPlayer/Static").play(0.7);
 #up
 func _on_Area2D2_input_event_up(_viewport, event, _shape_idx):
 	if event.is_action_pressed("click"):
@@ -125,10 +130,13 @@ func _on_Area2D2_input_event_up(_viewport, event, _shape_idx):
 				$slector.position += Vector2(-128, 96)
 				onTile += Vector2(-1,0)
 				onSprighTile += Vector2(4, -3)
+				get_parent().get_node("AudioStreamPlayer/AlgoMove").play();
 				if not loopedCams.has(tileMap [onTile[0]] [onTile[1]][0]):
 					if get_parent().get_node("UI/camLoop").looped:loopedCams.append(get_parent().get_node("UI/camLoop").idn)
 					else: loos()
 				if onTile == winTile:win()
+			elif $mover/flore.get_cell(onSprighTile[0]+4, onSprighTile[1]-3) > 0: 
+				get_parent().get_node("AudioStreamPlayer/DoorLocked").play();
 				
 	if event.is_action_pressed("Rclick"):
 		
@@ -147,17 +155,20 @@ func _on_Area2D2_input_event_up(_viewport, event, _shape_idx):
 func _on_Area2D3_input_event_left(_viewport, event, _shape_idx):
 	if event.is_action_pressed("click"):
 		#print("right",onTile,  tileMap [onTile[0]] [onTile[1]])
-		if $mover/flore.get_cell(onSprighTile[0]+4, onSprighTile[1]+3) >= 0 :
+		if $mover/flore.get_cell(onSprighTile[0]+4, onSprighTile[1]+3) >= 0:
 			#if tileMap [onTile[0]] [onTile[1]+1][1] != -1:
 			if unlocked.has(tileMap [onTile[0]] [onTile[1]+1][1]):
 				$mover.position += Vector2(-128, -96)
 				$slector.position += Vector2(-128, -96)
 				onTile += Vector2(0,1)
 				onSprighTile += Vector2(4, 3)
+				get_parent().get_node("AudioStreamPlayer/AlgoMove").play();
 				if not loopedCams.has(tileMap [onTile[0]] [onTile[1]][0]):
 					if get_parent().get_node("UI/camLoop").looped:loopedCams.append(get_parent().get_node("UI/camLoop").idn)
 					else: loos()
 				if onTile == winTile:win()
+			elif $mover/flore.get_cell(onSprighTile[0]+4, onSprighTile[1]+3) > 0:
+				get_parent().get_node("AudioStreamPlayer/DoorLocked").play();
 				
 	if event.is_action_pressed("Rclick"):
 		$slector.position = sRight
@@ -180,16 +191,19 @@ func _on_Area2D4_input_event_down(_viewport, event, _shape_idx):
 				$slector.position += Vector2(128, -96)
 				onTile += Vector2(1,0)
 				onSprighTile += Vector2(-4, 3)
+				get_parent().get_node("AudioStreamPlayer/AlgoMove").play();
 				if not loopedCams.has(tileMap [onTile[0]] [onTile[1]][0]):
 					if get_parent().get_node("UI/camLoop").looped:loopedCams.append(get_parent().get_node("UI/camLoop").idn)
 					else: loos()
 				if onTile == winTile:win()
+			elif($mover/flore.get_cell(onSprighTile[0]-4, onSprighTile[1]+3) > 0):
+				get_parent().get_node("AudioStreamPlayer/DoorLocked").play();
 	if event.is_action_pressed("Rclick"):
 		$slector.position = sDown
 		var sTile = tileMap [onTile[0]+1] [onTile[1]]
 		checkDoneCam(get_parent().get_node("UI").get_node("camLoop").loadVid(sTile[0]))
 		if sTile[0] > -1 and loopedCams.has(sTile[0]):get_parent().get_node("UI").get_node("camLoop").solve()
-		if sTile[1] <= 0 and sTile[2] <= 0:swopCode(0)		
+		if sTile[1] <= 0 and sTile[2] <= 0:swopCode(0)
 		if sTile[1] > 0 :swopCode(sTile[1])
 		if sTile[2] > 0 :swopCode(sTile[2])
 #left
@@ -203,10 +217,13 @@ func _on_Area2D5_input_event_right(_viewport, event, _shape_idx):
 					$slector.position += Vector2(128, 96)
 					onTile += Vector2(0,-1)
 					onSprighTile += Vector2(-4, -3)
+					get_parent().get_node("AudioStreamPlayer/AlgoMove").play();
 				if not loopedCams.has(tileMap [onTile[0]] [onTile[1]][0]):
 					if get_parent().get_node("UI/camLoop").looped:loopedCams.append(get_parent().get_node("UI/camLoop").idn)
 					else: loos()
 				if onTile == winTile:win()
+			elif(tileMap [onTile[0]] [onTile[1]][1] > 0):
+				get_parent().get_node("AudioStreamPlayer/DoorLocked").play();
 	if event.is_action_pressed("Rclick"):
 		$slector.position = sLeft
 		var sTile = tileMap [onTile[0]] [onTile[1]-1]
