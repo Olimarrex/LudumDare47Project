@@ -1131,12 +1131,33 @@ cell_y_sort = true
 format = 1
 tile_data = PoolIntArray( -262178, 536870958, 0, -65574, 536870958, 0, -65566, 536870958, 0, 131030, 536870958, 0, 131038, 536870958, 0, 131046, 536870958, 0, 327642, 536870958, 0, 327650, 536870958, 0, 327658, 536870958, 0, 524254, 536870958, 0, 524262, 536870958, 0, 524270, 536870958, 0, 720866, 536870958, 0, 720874, 536870958, 0, 917478, 536870958, 0 )
 
-[node name="TileMap2" type="TileMap" parent="Node2D/mover"]
+[node name="Wall3" type="TileMap" parent="Node2D/mover"]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( -262178, 53, 0, -65574, 53, 0, 131030, 53, 0, 131046, 536870965, 0, 327658, 536870965, 0, 524246, 536870965, 0, 524270, 53, 0, 720858, 536870965, 0, 917470, 536870965, 0, 1114082, 536870965, 0, 1114090, 53, 0 )
+tile_data = PoolIntArray( -262178, 53, 0, -65574, 53, 0, 131030, 53, 0, 131046, 536870965, 0, 327658, 48, 0, 524246, 536870965, 0, 524270, 53, 0, 720858, 536870965, 0, 917470, 536870965, 0, 1114082, 536870965, 0, 1114090, 53, 0 )
+
+[node name="Wall4" type="TileMap" parent="Node2D/mover"]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( -262178, 53, 0, 327658, 536870965, 0 )
+
+[node name="deck3" type="TileMap" parent="Node2D/mover"]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 8, 8 )
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( -12, 536870941, 0, 524187, 536870941, 0, 655262, 536870941, 0, 786337, 536870941, 0, 917412, 536870941, 0, 1048487, 536870941, 0 )
+
+[node name="Wall" type="TileMap" parent="Node2D/mover"]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( -262178, 53, 0, -65574, 536870960, 0, 131030, 53, 0, 131038, 48, 0, 327642, 53, 0, 524246, 536870965, 0, 524270, 53, 0, 720858, 536870965, 0, 917470, 536870965, 0, 1114082, 536870965, 0, 1114090, 53, 0 )
 
 [node name="deck2" type="TileMap" parent="Node2D/mover"]
 tile_set = SubResource( 2 )
@@ -1145,37 +1166,43 @@ cell_y_sort = true
 format = 1
 tile_data = PoolIntArray( 131028, 54, 0 )
 
-[node name="TileMap3" type="TileMap" parent="Node2D/mover"]
+[node name="Wall2" type="TileMap" parent="Node2D/mover"]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( -262178, 536870965, 0, -65566, 536870965, 0, 131038, 536870965, 0, 327634, 536870965, 0, 327650, 536870965, 0, 327658, 48, 0, 524262, 536870965, 0, 524270, 536870965, 0, 589805, 536870974, 0, 720882, 53, 0, 917486, 53, 0, 1048550, 536870966, 0, 1114082, 536870965, 0, 1114090, 53, 0 )
+tile_data = PoolIntArray( -262178, 536870965, 0, -65566, 536870965, 0, 131038, 536870965, 0, 327634, 536870965, 0, 327650, 536870965, 0, 524262, 536870965, 0, 524270, 536870965, 0, 589805, 536870974, 0, 720882, 53, 0, 917486, 53, 0, 1048550, 536870966, 0, 1114082, 536870965, 0, 1114090, 53, 0 )
 
 [node name="deck" type="TileMap" parent="Node2D/mover"]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( -393250, 54, 0, -65565, 24, 0, 131038, 536870956, 0, 327650, 536870956, 0, 458736, 36, 0, 524262, 536870956, 0, 720870, 21, 0 )
+tile_data = PoolIntArray( -393250, 54, 0, -65565, 24, 0, 131038, 536870956, 0, 327650, 536870956, 0, 458736, 36, 0, 524262, 536870956, 0, 524270, 42, 0, 720870, 21, 0 )
 
 [node name="slector" type="Sprite" parent="Node2D"]
+visible = false
 position = Vector2( -579, 254 )
 texture = ExtResource( 32 )
 
 [node name="Area2D" parent="Node2D" instance=ExtResource( 2 )]
+visible = false
 position = Vector2( -448, 294 )
 
 [node name="Area2D2" parent="Node2D" instance=ExtResource( 2 )]
+visible = false
 position = Vector2( -320, 198 )
 
 [node name="Area2D3" parent="Node2D" instance=ExtResource( 2 )]
+visible = false
 position = Vector2( -320, 390 )
 
 [node name="Area2D4" parent="Node2D" instance=ExtResource( 2 )]
+visible = false
 position = Vector2( -576, 390 )
 
 [node name="Area2D5" parent="Node2D" instance=ExtResource( 2 )]
+visible = false
 position = Vector2( -576, 198 )
 
 [node name="UI" parent="." instance=ExtResource( 3 )]
