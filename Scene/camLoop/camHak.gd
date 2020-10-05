@@ -7,7 +7,7 @@ extends Node2D
 var playTime = 0.0
 var vid = Node2D
 var loop = Vector2(0,50)
-var loopFrams = {0:[0,49], 1:[15,30]}
+var loopFrams = {0:[0,49], 1:[15,30], 2:[7,46]}
 var loopIn = 0
 var loopOut = 0
 var idn = 0
@@ -23,6 +23,7 @@ func _ready():
 
 
 func solve():
+	print("solve")
 	$in.position[0] = int(loopFrams[idn][0]*28/5)+8
 	$out.position[0] = int(loopFrams[idn][1]*28/5)+30
 
@@ -51,9 +52,10 @@ func _process(_delta):
 	if playTime >= ($out.position[0]-30)/28:
 		loopIn = int((($in.position[0]-8)/28)*5)
 		loopOut = int((($out.position[0]-30)/28)*5)
-		#print("loop ", loopIn, "  ", loopOut)
+		print("loop ", loopIn, "  ", loopOut)
 		if loopIn == loopFrams[idn][0] and loopOut == loopFrams[idn][1]:
 			looped = true
+			print("it looped")
 			emit_signal("looped")
 		else:looped = false
 		loop = Vector2(int((($in.position[0]-8)/28)*5), int((($out.position[0]-30)/28)*5))

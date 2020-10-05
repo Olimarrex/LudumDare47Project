@@ -13,6 +13,7 @@ var tileMap = [
 
 var onSprighTile =  Vector2(-18, 7)
 var onTile = Vector2(3,2)
+var winTile = Vector2(1,1)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
