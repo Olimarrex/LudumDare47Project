@@ -151,13 +151,13 @@ func _on_Timer_timeout():
 
 
 func _on_Area2D_mouse_entered():
-	if blockType == "Start": $Label.text = "the start"
-	if blockType == "End": $Label.text = "the end you dont want it to get heir"
-	if blockType == "noMove":$Label.text = "you cant move this"
-	if blockType == "includ":$Label.text = "you have to include this in the loop"
-	if blockType == "exclud":$Label.text = "you cant inclut this in the loop"
-	if blockType == "solid":$Label.text = "a block"
-	if blockType == "middle":$Label.text = "moveable spinable"
+	if blockType == "Start": $Label.text = "The start"
+	if blockType == "End": $Label.text = "The end"
+	if blockType == "noMove":$Label.text = "Can't move this"
+	if blockType == "includ":$Label.text = "Must be part of the loop"
+	if blockType == "exclud":$Label.text = "Must not be part of the loop"
+	if blockType == "solid":$Label.text = "Solid block"
+	if blockType == "middle":$Label.text = "Code goes through here"
 	
 
 
