@@ -60,7 +60,7 @@ func _ready():
 #	pass
 
 
-func _on_Area2D_input_event(viewport, event, shape_idx):
+func _on_Area2D_input_event(_viewport, event, _shape_idx):
 	if movable:
 		if event.is_action_pressed("click"):
 			dragging = true

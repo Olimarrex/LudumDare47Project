@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Static.ogg-b03ea38eff320980aa97a394b83987f5.oggstr"
+
+[deps]
+
+source_file="res://sounds/Static.ogg"
+dest_files=[ "res://.import/Static.ogg-b03ea38eff320980aa97a394b83987f5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

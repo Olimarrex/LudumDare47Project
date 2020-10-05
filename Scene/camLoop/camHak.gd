@@ -7,6 +7,12 @@ extends Node2D
 var playTime = 0.0
 var vid = Node2D
 var loop = Vector2(0,50)
+var loopFrams = {0:[0,49], 1:[15,30]}
+var loopIn = 0
+var loopOut = 0
+var idn = 0
+var looped = false
+signal looped
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,6 +21,10 @@ func _ready():
 	vid = $AnimatedSprite
 	vid.set_frame(0)
 
+
+func solve():
+	$in.position[0] = int(loopFrams[idn][0]*28/5)+8
+	$out.position[0] = int(loopFrams[idn][1]*28/5)+30
 
 func loadVid(id=0):
 	if id != -1:
@@ -26,6 +36,7 @@ func loadVid(id=0):
 		$AnimationPlayer.seek(0, true)
 		$AnimationPlayer.play()
 		vid.z_index = -1
+		idn = id
 	else: 
 		vid.z_index = -2
 		$AnimationPlayer.seek(0, true)
@@ -34,10 +45,17 @@ func loadVid(id=0):
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	playTime = $AnimationPlayer.get_current_animation_position()
+func _process(_delta):
+	if $AnimationPlayer.is_playing ( ):playTime = $AnimationPlayer.get_current_animation_position()
+	else: playTime = 0
 	if playTime >= ($out.position[0]-30)/28:
-		print("loop ", int((($in.position[0]-8)/28)*5), "  ",int((($out.position[0]-30)/28)*5))
+		loopIn = int((($in.position[0]-8)/28)*5)
+		loopOut = int((($out.position[0]-30)/28)*5)
+		#print("loop ", loopIn, "  ", loopOut)
+		if loopIn == loopFrams[idn][0] and loopOut == loopFrams[idn][1]:
+			looped = true
+			emit_signal("looped")
+		else:looped = false
 		loop = Vector2(int((($in.position[0]-8)/28)*5), int((($out.position[0]-30)/28)*5))
 		$AnimationPlayer.seek(($in.position[0]-8)/28, true)
 		vid.set_frame(int((($in.position[0]-8)/28)*5))

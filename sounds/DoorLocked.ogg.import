@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DoorLocked.ogg-64daa38ccf67cc56879c4ba8c5ab8309.oggstr"
+
+[deps]
+
+source_file="res://sounds/DoorLocked.ogg"
+dest_files=[ "res://.import/DoorLocked.ogg-64daa38ccf67cc56879c4ba8c5ab8309.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

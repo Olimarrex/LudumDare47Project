@@ -11,6 +11,7 @@ var tileMap = [
 [[-1, 0, 0],[-1, 0, 0],[-1, 0, 1], [-1, 0,-1]],
 [[-1, 0, 0],[-1, 0, 0],[-1, 0, 0], [-1, 0, 0]]]
 
+var onSprighTile =  Vector2(-18, 7)
 var onTile = Vector2(3,2)
 
 # Called when the node enters the scene tree for the first time.

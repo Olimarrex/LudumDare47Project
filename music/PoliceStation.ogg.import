@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/PoliceStation.ogg-843067570879ca1e0a18bab4aa070434.oggstr"
+
+[deps]
+
+source_file="res://music/PoliceStation.ogg"
+dest_files=[ "res://.import/PoliceStation.ogg-843067570879ca1e0a18bab4aa070434.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

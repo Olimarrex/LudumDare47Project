@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Bank.ogg-0277cac70dbe29b3f0aeca56000a772a.oggstr"
+
+[deps]
+
+source_file="res://music/Bank.ogg"
+dest_files=[ "res://.import/Bank.ogg-0277cac70dbe29b3f0aeca56000a772a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MobBase.ogg-83ea7f089316947ba243deb2aa27b9a5.oggstr"
+
+[deps]
+
+source_file="res://music/MobBase.ogg"
+dest_files=[ "res://.import/MobBase.ogg-83ea7f089316947ba243deb2aa27b9a5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
